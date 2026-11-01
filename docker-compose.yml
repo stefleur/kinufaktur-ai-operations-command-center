@@ -1,0 +1,55 @@
+name: kinufaktur-operations
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: operations
+      POSTGRES_PASSWORD: local-synthetic-password
+      POSTGRES_DB: operations
+    volumes: [db_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U operations -d operations]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  demo-dependency:
+    build: ./backend
+    command: [python, -m, app.demo_dependency]
+    environment:
+      DEMO_CONTROL_TOKEN: synthetic-local-demo
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:9000/live', timeout=2)"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  backend:
+    build: ./backend
+    depends_on:
+      postgres: {condition: service_healthy}
+      demo-dependency: {condition: service_healthy}
+    environment:
+      DATABASE_URL: postgresql+psycopg://operations:local-synthetic-password@postgres:5432/operations
+      TELEMETRY_DB: /data/telemetry.db
+      DEMO_MODE: "true"
+      DEMO_CONTROL_TOKEN: synthetic-local-demo
+      DEMO_DEPENDENCY_URL: http://demo-dependency:9000
+      KINUFLOW_CORS_ORIGINS: http://localhost:5173,http://127.0.0.1:5173
+    volumes: [telemetry_data:/data]
+    ports: ["127.0.0.1:8000:8000"]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_BASE_URL: /api
+        VITE_BASE: /
+    depends_on:
+      backend: {condition: service_healthy}
+    ports: ["127.0.0.1:5173:80"]
+volumes:
+  db_data:
+  telemetry_data:

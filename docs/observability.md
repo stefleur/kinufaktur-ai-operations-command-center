@@ -1,0 +1,7 @@
+# Observability
+
+Each frontend request emits traceparent and X-Request-ID. FastAPI extracts W3C context, starts a server span, returns trace/request correlation headers, logs a metadata-only JSON request event and persists status/latency. SQLAlchemy engine events record operation names (SELECT/INSERT/etc), never SQL text or parameters. Backend dependency and on-call action/verification spans share the same trace.
+
+OpenTelemetry SDK SimpleSpanProcessor and PersistentSpanExporter write spans to telemetry.db, a WAL SQLite store on telemetry_data. Request/workflow records provide counts, average latency, error rate and failed-workflow counts. These are real persisted measurements, not placeholder dashboard numbers. Logs include trace_id and request_id. /ops/telemetry exposes recent records and React filters by incident trace. /ops/overview includes health, metrics, alerts and incidents.
+
+`make demo-incident` checks one identifiable incoming trace, failed request, workflow_failed and alert_fired log events, agent spans, real tool output and successful recovered workflow. See evidence/demo-incident.json. Request bodies, raw URLs, query strings, SQL, parameters, tokens and exception payloads are excluded. Storage is append-only and currently lacks retention; this is a small local backend, not a horizontally scalable collector. The dependency accepts propagated trace context; backend spans cover its calls, while no separate dependency-side exporter is claimed.

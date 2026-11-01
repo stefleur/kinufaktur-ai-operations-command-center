@@ -1,0 +1,13 @@
+# Independent deployment
+
+Local runtime is verified with Docker Compose. No original hosting provider, database, production URL, secret or workflow is reused. The new repository has separate development and production GitHub environments.
+
+To host independently, provision a dedicated Linux Docker host with persistent storage and TLS reverse proxy. Clone this repository at the reviewed commit, run docker compose up --build -d --wait, route the frontend through HTTPS, and retain /api proxying. Bind Compose loopback ports behind the TLS proxy. Keep PostgreSQL and the demo dependency private. Authentication must be provided by a gateway before exposing this educational application. Use synthetic data. Change local control/default credentials for any shared host; disable DEMO_MODE outside the isolated demonstration. For the full incident demo use a dedicated protected staging instance with DEMO_MODE=true.
+
+Configure environment secret DEV_DEPLOY_HOOK for development and PROD_DEPLOY_HOOK for production. The hook must deploy the triggering commit to the independent host; configure it to authenticate and reject stale releases. Set environment variables FRONTEND_URL and API_URL to the actual HTTPS endpoints (API_URL can end in /api). Never log hooks. The workflows refuse to deploy without all configuration and require successful HTTP smoke checks. Their HTTP checks prove reachability, not commit identity; operators should expose release identity before production use.
+
+CI runs tests on PRs and main, builds/starts the real stack and verifies incidents/persistence. The downstream development job requires passing tests, then calls the development hook and polls health/frontend. Production uses workflow_dispatch and reruns release tests before accessing its environment/hook. Configure required reviewers on production; manual dispatch remains the manual trigger boundary even where reviewer protection is unavailable. Add branch protection for main requiring test. No production approval protection is claimed unless API verification confirms it.
+
+Rollback: select a previously verified commit, redeploy images built from that commit via the independent host, preserve data volumes, and run make smoke plus a protected staging incident check. Back up both volumes first. No destructive database rollback tool is available to the agent.
+
+Current blocker: no independently provisioned public Docker host or deployment hook/URLs are supplied. No paid service has been provisioned. No full-stack public URL is claimed. The environment and workflows are real; external deployment success requires runtime HTTP evidence.

@@ -1,0 +1,53 @@
+name: Verify and deploy development
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.8"
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: make test
+      - name: Build and start PostgreSQL integration stack
+        run: docker compose up --build -d --wait
+      - run: make smoke demo-incident
+      - name: Verify PostgreSQL persistence across backend restart
+        run: python3 scripts/persistence.py
+      - if: failure()
+        run: docker compose logs --no-color
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-evidence
+          path: evidence/
+      - if: always()
+        run: docker compose down
+  development:
+    needs: test
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - name: Require independent deployment configuration
+        env:
+          DEPLOY_HOOK: ${{ secrets.DEV_DEPLOY_HOOK }}
+          FRONTEND_URL: ${{ vars.FRONTEND_URL }}
+          API_URL: ${{ vars.API_URL }}
+        run: |
+          test -n "$DEPLOY_HOOK" && test -n "$FRONTEND_URL" && test -n "$API_URL"
+          curl --fail --silent --show-error -X POST "$DEPLOY_HOOK"
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent "$API_URL/health" && curl --fail --silent "$FRONTEND_URL"; then exit 0; fi
+            sleep 10
+          done
+          exit 1

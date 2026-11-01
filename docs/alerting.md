@@ -1,0 +1,5 @@
+# User-impact alert rule
+
+Rule workflow_failure: threshold one actual failed dependency call in POST /workflows/run. Fault injection alone creates no incident. A failed workflow records a failure metric and structured error, creates an open incident and a firing alert with timestamp, request/trace context, then automatically invokes the on-call agent. The HTTP response remains 503 to accurately report the user's failed operation even if recovery finishes before response delivery.
+
+A verified reset and subsequent real /health response transition incident and alert to resolved. Unknown failures, disabled automatic demo remediation and failed verification leave an unresolved needs_human incident and firing alert. One action is allowed per incident, with no retry loop. Tests include real HTTP fault and recovery, denied/unknown diagnosis, failed recovery and disabled fault injection. The rule covers workflow user impact; task database errors are observable but do not currently invoke this dependency-specific agent.

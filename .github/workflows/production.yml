@@ -1,0 +1,26 @@
+name: Approve production deployment
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    uses: ./.github/workflows/verify-release.yml
+  production:
+    needs: verify
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy and verify
+        env:
+          DEPLOY_HOOK: ${{ secrets.PROD_DEPLOY_HOOK }}
+          FRONTEND_URL: ${{ vars.FRONTEND_URL }}
+          API_URL: ${{ vars.API_URL }}
+        run: |
+          test -n "$DEPLOY_HOOK" && test -n "$FRONTEND_URL" && test -n "$API_URL"
+          curl --fail --silent --show-error -X POST "$DEPLOY_HOOK"
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent "$API_URL/health" && curl --fail --silent "$FRONTEND_URL"; then exit 0; fi
+            sleep 10
+          done
+          exit 1

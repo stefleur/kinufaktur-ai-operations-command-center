@@ -1,0 +1,23 @@
+[project]
+name = "kinufaktur-operations-backend"
+version = "0.1.0"
+description = "Operations backend, telemetry and bounded on-call agent"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "sqlalchemy>=2.0.53",
+    "uvicorn[standard]>=0.53.0",
+    "psycopg[binary]>=3.1",
+    "opentelemetry-sdk>=1.39,<2",
+]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = ["integration: application wiring and SQLAlchemy persistence lifecycle"]

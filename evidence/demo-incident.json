@@ -1,0 +1,463 @@
+{
+  "recorded_at": "2026-11-01T20:34:20.565855+00:00",
+  "base_url": "http://localhost:8000",
+  "baseline": {
+    "status": 200,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "server": "uvicorn",
+      "content-length": "22",
+      "content-type": "application/json",
+      "x-request-id": "25c0debb-af93-464b-a9f5-389d1549bf17",
+      "x-trace-id": "c2de6532de5ec446f03509ddfc6009e5",
+      "traceparent": "00-c2de6532de5ec446f03509ddfc6009e5-99a4d1ae2c0593e9-01",
+      "connection": "close"
+    },
+    "body": {
+      "status": "completed"
+    }
+  },
+  "fault": {
+    "status": 200,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "server": "uvicorn",
+      "content-length": "20",
+      "content-type": "application/json",
+      "x-request-id": "69a5011f-fce9-43d3-9bd2-360637dfdf40",
+      "x-trace-id": "6e8e514aa5525fe29ed4e269798a12b7",
+      "traceparent": "00-6e8e514aa5525fe29ed4e269798a12b7-3fe81dac8633fba0-01",
+      "connection": "close"
+    },
+    "body": {
+      "status": "faulted"
+    }
+  },
+  "failed_request": {
+    "status": 503,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "server": "uvicorn",
+      "content-length": "149",
+      "content-type": "application/json",
+      "x-request-id": "demo-dc91bef9bf3a9d3c1fb9837e",
+      "x-trace-id": "024e53116b7509fe8a534f267c911e14",
+      "traceparent": "00-024e53116b7509fe8a534f267c911e14-0c6f0111dc7a11a2-01",
+      "connection": "close"
+    },
+    "body": {
+      "detail": "Demo workflow dependency unavailable.",
+      "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+      "trace_id": "024e53116b7509fe8a534f267c911e14"
+    }
+  },
+  "incident": {
+    "timestamp": 1793565260.6357012,
+    "id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+    "trace_id": "024e53116b7509fe8a534f267c911e14",
+    "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+    "status": "resolved",
+    "diagnosis": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact.",
+    "action": "reset_demo_dependency",
+    "result": "Verified dependency recovery through HTTP health check.",
+    "timeline": [
+      {
+        "timestamp": 1793565260.6082213,
+        "event": "user_impact_detected"
+      },
+      {
+        "timestamp": 1793565260.6107116,
+        "event": "agent_activated"
+      },
+      {
+        "timestamp": 1793565260.6121187,
+        "event": "tool_started",
+        "tool": "inspect_telemetry_and_health"
+      },
+      {
+        "timestamp": 1793565260.616374,
+        "event": "observation",
+        "tool": "inspect_telemetry_and_health",
+        "result": {
+          "health": {
+            "status_code": 503,
+            "status": "faulted"
+          },
+          "failed_workflow_count": 1,
+          "correlated_log_count": 4,
+          "correlated_span_count": 1
+        }
+      },
+      {
+        "timestamp": 1793565260.6187425,
+        "event": "diagnosis",
+        "result": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact."
+      },
+      {
+        "timestamp": 1793565260.622371,
+        "event": "tool_started",
+        "tool": "reset_demo_dependency"
+      },
+      {
+        "timestamp": 1793565260.6266747,
+        "event": "tool_invocation",
+        "tool": "reset_demo_dependency",
+        "result": {
+          "status_code": 200,
+          "status": "healthy"
+        }
+      },
+      {
+        "timestamp": 1793565260.6282792,
+        "event": "tool_started",
+        "tool": "dependency_health"
+      },
+      {
+        "timestamp": 1793565260.6317291,
+        "event": "recovery_verification",
+        "tool": "dependency_health",
+        "result": {
+          "status_code": 200,
+          "status": "healthy"
+        }
+      },
+      {
+        "timestamp": 1793565260.6332471,
+        "event": "incident_resolved",
+        "result": "Verified dependency recovery through HTTP health check."
+      }
+    ]
+  },
+  "overview": {
+    "health": {
+      "status": "healthy",
+      "dependency": {
+        "status_code": 200,
+        "status": "healthy"
+      }
+    },
+    "metrics": {
+      "request_count": 27,
+      "error_count": 1,
+      "error_rate": 0.037037037037037035,
+      "average_latency_ms": 13.627341000003483,
+      "workflow_count": 2,
+      "failed_workflow_count": 1
+    },
+    "incidents": [
+      {
+        "timestamp": 1793565260.6357012,
+        "id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "status": "resolved",
+        "diagnosis": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact.",
+        "action": "reset_demo_dependency",
+        "result": "Verified dependency recovery through HTTP health check.",
+        "timeline": [
+          {
+            "timestamp": 1793565260.6082213,
+            "event": "user_impact_detected"
+          },
+          {
+            "timestamp": 1793565260.6107116,
+            "event": "agent_activated"
+          },
+          {
+            "timestamp": 1793565260.6121187,
+            "event": "tool_started",
+            "tool": "inspect_telemetry_and_health"
+          },
+          {
+            "timestamp": 1793565260.616374,
+            "event": "observation",
+            "tool": "inspect_telemetry_and_health",
+            "result": {
+              "health": {
+                "status_code": 503,
+                "status": "faulted"
+              },
+              "failed_workflow_count": 1,
+              "correlated_log_count": 4,
+              "correlated_span_count": 1
+            }
+          },
+          {
+            "timestamp": 1793565260.6187425,
+            "event": "diagnosis",
+            "result": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact."
+          },
+          {
+            "timestamp": 1793565260.622371,
+            "event": "tool_started",
+            "tool": "reset_demo_dependency"
+          },
+          {
+            "timestamp": 1793565260.6266747,
+            "event": "tool_invocation",
+            "tool": "reset_demo_dependency",
+            "result": {
+              "status_code": 200,
+              "status": "healthy"
+            }
+          },
+          {
+            "timestamp": 1793565260.6282792,
+            "event": "tool_started",
+            "tool": "dependency_health"
+          },
+          {
+            "timestamp": 1793565260.6317291,
+            "event": "recovery_verification",
+            "tool": "dependency_health",
+            "result": {
+              "status_code": 200,
+              "status": "healthy"
+            }
+          },
+          {
+            "timestamp": 1793565260.6332471,
+            "event": "incident_resolved",
+            "result": "Verified dependency recovery through HTTP health check."
+          }
+        ]
+      }
+    ],
+    "alerts": [
+      {
+        "timestamp": 1793565260.6365538,
+        "id": "8868f52d-69b4-4396-9662-576b12b7f195",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "rule": "workflow_failure",
+        "threshold": 1,
+        "state": "resolved"
+      }
+    ]
+  },
+  "correlated_telemetry": {
+    "traces": [
+      {
+        "timestamp": 1793565260.6391778,
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "span_id": "0c6f0111dc7a11a2",
+        "parent_span_id": "58d8d66ff3636ba7",
+        "name": "POST /workflows/run",
+        "duration_ms": 35.970833,
+        "status": "ERROR",
+        "attributes": {
+          "http.request.method": "POST",
+          "http.route": "/workflows/run",
+          "http.response.status_code": 503,
+          "request.id": "demo-dc91bef9bf3a9d3c1fb9837e"
+        },
+        "id": "4c4b200e-fdb5-4ec4-a341-d7aace880197"
+      },
+      {
+        "timestamp": 1793565260.6350121,
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "span_id": "adb31bcd5d1b853c",
+        "parent_span_id": "0c6f0111dc7a11a2",
+        "name": "on_call_agent",
+        "duration_ms": 24.3275,
+        "status": "UNSET",
+        "attributes": {},
+        "id": "3feb80a3-15f4-4ffb-bcfd-245836e1413c"
+      },
+      {
+        "timestamp": 1793565260.6309755,
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "span_id": "9b5c88841f7c6042",
+        "parent_span_id": "adb31bcd5d1b853c",
+        "name": "agent.verify_health",
+        "duration_ms": 1.042,
+        "status": "UNSET",
+        "attributes": {},
+        "id": "69619baa-55a1-4460-87ce-40ccce35cdde"
+      },
+      {
+        "timestamp": 1793565260.625807,
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "span_id": "0ed524c644ab08b3",
+        "parent_span_id": "adb31bcd5d1b853c",
+        "name": "agent.reset_demo_dependency",
+        "duration_ms": 1.546709,
+        "status": "UNSET",
+        "attributes": {},
+        "id": "d1957309-308a-4ef1-a31d-7ccbd072964a"
+      },
+      {
+        "timestamp": 1793565260.6055398,
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "span_id": "96998722f8b61dce",
+        "parent_span_id": "0c6f0111dc7a11a2",
+        "name": "workflow.dependency",
+        "duration_ms": 1.95575,
+        "status": "ERROR",
+        "attributes": {
+          "http.response.status_code": 503
+        },
+        "id": "289184ac-ff30-4bb0-9068-66905099a1bf"
+      }
+    ],
+    "logs": [
+      {
+        "timestamp": 1793565260.6375332,
+        "event": "http_request",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "method": "POST",
+        "route": "/workflows/run",
+        "status_code": 503,
+        "duration_ms": 34.562958000037725,
+        "id": "a61daad7-8bcf-4bf6-a8a6-554a4e4692fe"
+      },
+      {
+        "timestamp": 1793565260.633257,
+        "event": "incident_resolved",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "result": "Verified dependency recovery through HTTP health check.",
+        "id": "b1255fa0-b46f-4461-9a1e-7c9d9acdc8cc"
+      },
+      {
+        "timestamp": 1793565260.6317396,
+        "event": "recovery_verification",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "tool": "dependency_health",
+        "result": {
+          "status_code": 200,
+          "status": "healthy"
+        },
+        "id": "916e52d9-0647-44e6-b3f8-3bba9669ff67"
+      },
+      {
+        "timestamp": 1793565260.6282895,
+        "event": "tool_started",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "tool": "dependency_health",
+        "id": "dbe3f3fc-92ef-4248-a4e0-9640c3e2b572"
+      },
+      {
+        "timestamp": 1793565260.6266856,
+        "event": "tool_invocation",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "tool": "reset_demo_dependency",
+        "result": {
+          "status_code": 200,
+          "status": "healthy"
+        },
+        "id": "290745c1-de3b-41ef-97b8-ce397df8e553"
+      },
+      {
+        "timestamp": 1793565260.6223829,
+        "event": "tool_started",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "tool": "reset_demo_dependency",
+        "id": "748d9220-d7bb-4e37-91ce-8810e6a720e4"
+      },
+      {
+        "timestamp": 1793565260.6187522,
+        "event": "diagnosis",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "result": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact.",
+        "id": "00107fb9-386e-4d4e-bdbc-87b09c1c80b3"
+      },
+      {
+        "timestamp": 1793565260.6163948,
+        "event": "observation",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "tool": "inspect_telemetry_and_health",
+        "result": {
+          "health": {
+            "status_code": 503,
+            "status": "faulted"
+          },
+          "failed_workflow_count": 1,
+          "correlated_log_count": 4,
+          "correlated_span_count": 1
+        },
+        "id": "edfe5325-41a1-48bc-83e7-17882087bd4e"
+      },
+      {
+        "timestamp": 1793565260.612128,
+        "event": "tool_started",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "tool": "inspect_telemetry_and_health",
+        "id": "f9c90010-b72d-4a70-a4c8-fe707e5c4328"
+      },
+      {
+        "timestamp": 1793565260.6107187,
+        "event": "agent_activated",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "id": "3fa7024e-4cf5-40ae-8fa7-c984aff7e919"
+      },
+      {
+        "timestamp": 1793565260.6098516,
+        "event": "alert_fired",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "rule": "workflow_failure",
+        "id": "9260f783-2820-4551-9aad-d3a65aedaeea"
+      },
+      {
+        "timestamp": 1793565260.607435,
+        "event": "workflow_failed",
+        "trace_id": "024e53116b7509fe8a534f267c911e14",
+        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "status_code": 503,
+        "id": "73b76dec-fb39-4cad-ad32-3daeb3f5f6b4"
+      }
+    ]
+  },
+  "health": {
+    "status": 200,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "server": "uvicorn",
+      "content-length": "20",
+      "content-type": "application/json",
+      "x-request-id": "67dd795b-ba30-4ff1-bbe8-f50c2e1f1aaa",
+      "x-trace-id": "fa7c48d158d5695ebc0a169d7d88c90a",
+      "traceparent": "00-fa7c48d158d5695ebc0a169d7d88c90a-5b26392b1fa910ed-01",
+      "connection": "close"
+    },
+    "body": {
+      "status": "healthy"
+    }
+  },
+  "recovered_request": {
+    "status": 200,
+    "headers": {
+      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "server": "uvicorn",
+      "content-length": "22",
+      "content-type": "application/json",
+      "x-request-id": "6ccfd7ed-7238-4620-a2d7-6e6fee215125",
+      "x-trace-id": "2886c57abbec504e7e24bbd8877c6098",
+      "traceparent": "00-2886c57abbec504e7e24bbd8877c6098-d390590c6607776d-01",
+      "connection": "close"
+    },
+    "body": {
+      "status": "completed"
+    }
+  }
+}

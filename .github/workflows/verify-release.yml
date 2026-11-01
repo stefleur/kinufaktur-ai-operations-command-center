@@ -1,0 +1,23 @@
+name: Verify release
+on:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.8"
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: make test
+      - run: docker compose up --build -d --wait
+      - run: make smoke demo-incident
+      - run: python3 scripts/persistence.py
+      - if: always()
+        run: docker compose down
