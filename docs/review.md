@@ -39,12 +39,18 @@ The collector verified every condition from runtime responses; it did not insert
 
 ## Dependency and static scans
 
-Initial `make security` correctly failed for locked `certifi==2026.7.22` (PYSEC-2026-4320) and `dnspython==2.8.0` (CVE-2026-114605). Backend upgraded to `certifi==2026.10.23` and `dnspython==2.9.1`; the final audit rerun is recorded below when complete.
+Initial `make security` correctly failed for locked `certifi==2026.7.22` (PYSEC-2026-4320) and `dnspython==2.8.0` (CVE-2026-114605). Backend upgraded to `certifi==2026.10.23` and `dnspython==2.9.1`. The final independent `make security` rerun exited zero: pip-audit reported **No known vulnerabilities found**.
 
-Initial `npm audit --audit-level=high` reported five development-tooling vulnerabilities, including critical tinypool issues through old Vitest and high Vite/source-map-js issues. Frontend agent is updating these dependencies; initial failures are retained here as findings, not passing evidence.
+Initial `npm audit --audit-level=high` reported five development-tooling vulnerabilities, including critical tinypool issues through old Vitest and high Vite/source-map-js issues. Frontend upgraded to `vitest==5.0.5`, `vite==7.3.7`, `@vitejs/plugin-react==5.2.0` and a patched transitive source-map-js. The final independent `make security` rerun reported **found 0 vulnerabilities** for npm; the complete target exited zero. Initial failures are retained here as corrected findings.
 
 `gitleaks dir backend/app --no-banner --redact`, equivalent scans of `frontend/src` and `scripts`, each reported **no leaks found**. This is a scoped source scan, not proof that every dependency or historical file contains no secret.
 
 Initial `bandit -r backend/app -q` found two medium issues: private Compose service binding on all interfaces, and urllib scheme validation. Backend added strict HTTP(S) origin and fixed-path validation plus six safety tests; narrow `B104` and `B310` annotations document the intentional private bind and validated HTTP client. The follow-up Bandit execution exited zero with no unsuppressed findings. These accepted annotations are explicitly disclosed rather than represented as absent risk.
 
 Frontend agent final checks after upgrades: npm audit reports zero vulnerabilities; 13 tests and build passed. Backend checks passed 27 tests; MCP/hook checks passed 12 tests. Root PostgreSQL container restart check passed, preserving both task and incident IDs. Browser screenshot execution was rejected by the tool approval boundary, so no screenshot or browser E2E is claimed. Root make test encountered a sandbox uv-cache access error; individual agent executions above passed and full CI is pending.
+
+## CI and deployment configuration review
+
+Review of `.github/workflows/ci.yml`, `production.yml` and `verify-release.yml` confirmed that development deployment depends on the test job, and manually triggered production deployment depends on the reusable verification workflow. Missing independent deployment hooks or URLs cause a visible failure; no source-project service is silently used. HTTP hook/health polling establishes endpoint reachability, not release identity. This limitation is disclosed in `docs/deployment.md`; no successful CD deployment is inferred from these files.
+
+The reviewer checked the new loopback-only Compose host ports, private PostgreSQL/dependency services, explicit demo controls and persistent data volumes. No original production endpoint remains in the active frontend defaults. Live incident assertions and final vulnerability audits passed as described above. Browser screenshot execution was not completed; component tests and successful builds must not be labeled browser end-to-end proof.

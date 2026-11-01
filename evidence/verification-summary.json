@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-01",
+  "source_commit": "64357240b867e83faa676384b17fe6643fd95d2d",
+  "source_checkout_status": "clean before and after independent implementation",
+  "backend_tests": 27,
+  "extension_tests": 12,
+  "frontend_tests": 13,
+  "frontend_build": "passed",
+  "dependency_audit": {
+    "backend": "No known vulnerabilities found",
+    "frontend": "0 vulnerabilities"
+  },
+  "compose_services_healthy": [
+    "frontend",
+    "backend",
+    "postgres",
+    "demo-dependency"
+  ],
+  "postgres_task_and_incident_restart_persistence": "passed before and after patched non-root rebuild",
+  "latest_incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
+  "latest_trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+  "correlated_spans": 5,
+  "correlated_logs": 12,
+  "timeline_events": 10,
+  "browser_screenshot": "not verified: launch approval rejected",
+  "public_deployment": "not verified: independent host/hooks/URLs absent",
+  "ci_run": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/actions/runs/41347664484",
+  "ci_test_job": "success",
+  "ci_development_job": "failure: required independent deployment configuration absent"
+}

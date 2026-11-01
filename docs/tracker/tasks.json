@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Product and isolated repository",
+    "body_file": "docs/tracker/1.md",
+    "implemented": true,
+    "url": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/issues/1"
+  },
+  {
+    "title": "Persistent tasks and workflow backend",
+    "body_file": "docs/tracker/2.md",
+    "implemented": true,
+    "url": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/issues/2"
+  },
+  {
+    "title": "Operations dashboard and trace context",
+    "body_file": "docs/tracker/3.md",
+    "implemented": true,
+    "url": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/issues/3"
+  },
+  {
+    "title": "Telemetry and automatic user impact alerting",
+    "body_file": "docs/tracker/4.md",
+    "implemented": true,
+    "url": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/issues/4"
+  },
+  {
+    "title": "Bounded autonomous on-call recovery",
+    "body_file": "docs/tracker/5.md",
+    "implemented": true,
+    "url": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/issues/5"
+  },
+  {
+    "title": "Container and CI verification",
+    "body_file": "docs/tracker/6.md",
+    "implemented": true,
+    "url": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/issues/6"
+  },
+  {
+    "title": "Independent public deployment and delivery evidence",
+    "body_file": "docs/tracker/7.md",
+    "implemented": false,
+    "url": "https://github.com/stefleur/kinufaktur-ai-operations-command-center/issues/7"
+  }
+]

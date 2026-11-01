@@ -1,0 +1,932 @@
+test	Set up job	﻿2026-11-01T20:35:49.8059057Z Current runner version: '2.338.2'
+test	Set up job	2026-11-01T20:35:49.8082180Z ##[group]Runner Image Provisioner
+test	Set up job	2026-11-01T20:35:49.8082911Z Hosted Compute Agent
+test	Set up job	2026-11-01T20:35:49.8083474Z Version: 20261021.618
+test	Set up job	2026-11-01T20:35:49.8083987Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+test	Set up job	2026-11-01T20:35:49.8084594Z Build Date: 2026-10-21T00:45:21Z
+test	Set up job	2026-11-01T20:35:49.8085159Z Worker ID: {de06ccf8-b906-43ec-ac02-d2d02952ebe5}
+test	Set up job	2026-11-01T20:35:49.8085758Z Region: westus3
+test	Set up job	2026-11-01T20:35:49.8086245Z Cloud: Azure
+test	Set up job	2026-11-01T20:35:49.8086723Z ##[endgroup]
+test	Set up job	2026-11-01T20:35:49.8087859Z ##[group]Operating System
+test	Set up job	2026-11-01T20:35:49.8088413Z Ubuntu
+test	Set up job	2026-11-01T20:35:49.8089058Z 26.04.1
+test	Set up job	2026-11-01T20:35:49.8089536Z LTS
+test	Set up job	2026-11-01T20:35:49.8089963Z ##[endgroup]
+test	Set up job	2026-11-01T20:35:49.8090403Z ##[group]Runner Image
+test	Set up job	2026-11-01T20:35:49.8090958Z Image: ubuntu-26.04
+test	Set up job	2026-11-01T20:35:49.8091458Z Version: 20261025.179.1
+test	Set up job	2026-11-01T20:35:49.8092342Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261025.179/images/ubuntu/Ubuntu2604-Readme.md
+test	Set up job	2026-11-01T20:35:49.8094137Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261025.179
+test	Set up job	2026-11-01T20:35:49.8095032Z ##[endgroup]
+test	Set up job	2026-11-01T20:35:49.8095940Z ##[group]GITHUB_TOKEN Permissions
+test	Set up job	2026-11-01T20:35:49.8097748Z Contents: read
+test	Set up job	2026-11-01T20:35:49.8098284Z Metadata: read
+test	Set up job	2026-11-01T20:35:49.8099007Z ##[endgroup]
+test	Set up job	2026-11-01T20:35:49.8100817Z Secret source: Actions
+test	Set up job	2026-11-01T20:35:49.8101614Z Cache mode: write
+test	Set up job	2026-11-01T20:35:49.8102197Z Prepare workflow directory
+test	Set up job	2026-11-01T20:35:49.8937003Z Prepare all required actions
+test	Set up job	2026-11-01T20:35:49.8993209Z Getting action download info
+test	Set up job	2026-11-01T20:35:50.2126665Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+test	Set up job	2026-11-01T20:35:50.3040145Z Download action repository 'astral-sh/setup-uv@v6' (SHA:d0cc045d04ccac9d8b7881df0226f9e82c39688e)
+test	Set up job	2026-11-01T20:35:51.0035596Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+test	Set up job	2026-11-01T20:35:51.1279501Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+test	Set up job	2026-11-01T20:35:51.4576426Z Complete job name: test
+test	Run actions/checkout@v4	﻿2026-11-01T20:35:51.6614241Z ##[group]Run actions/checkout@v4
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6615075Z with:
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6615615Z   repository: stefleur/kinufaktur-ai-operations-command-center
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6619626Z   token: ***
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6620024Z   ssh-strict: true
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6620410Z   ssh-user: git
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6620808Z   persist-credentials: true
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6621242Z   clean: true
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6621637Z   sparse-checkout-cone-mode: true
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6622086Z   fetch-depth: 1
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6622462Z   fetch-tags: false
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6622859Z   show-progress: true
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6623256Z   lfs: false
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6623646Z   submodules: false
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6624037Z   set-safe-directory: true
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6624471Z   allow-unsafe-pr-checkout: false
+test	Run actions/checkout@v4	2026-11-01T20:35:51.6625273Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9155438Z Syncing repository: stefleur/kinufaktur-ai-operations-command-center
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9157262Z ##[group]Getting Git version info
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9158317Z Working directory is '/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center'
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9159884Z [command]/usr/bin/git version
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9162502Z git version 2.56.0
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9178330Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9190556Z Temporarily overriding HOME='/home/runner/work/_temp/25cabfc9-7056-4453-b7c5-96fdcf4f9bb5' before making global git config changes
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9194752Z Adding repository directory to the temporary git global config as a safe directory
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9196136Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9454130Z Deleting the contents of '/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center'
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9457285Z ##[group]Initializing the repository
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9462821Z [command]/usr/bin/git init /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9577663Z hint: Using 'master' as the name for the initial branch. This default branch name
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9579718Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9581167Z hint: to use in all of your new repositories, which will suppress this warning,
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9582310Z hint: call:
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9583094Z hint:
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9583791Z hint: 	git config --global init.defaultBranch <name>
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9584350Z hint:
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9584886Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9585806Z hint: 'development'. The just-created branch can be renamed via this command:
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9586828Z hint:
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9587382Z hint: 	git branch -m <name>
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9588001Z hint:
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9588927Z hint: Disable this message with "git config set advice.defaultBranchName false"
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9590444Z Initialized empty Git repository in /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/.git/
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9601368Z [command]/usr/bin/git remote add origin https://github.com/stefleur/kinufaktur-ai-operations-command-center
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9657198Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9657977Z ##[group]Disabling automatic garbage collection
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9662438Z [command]/usr/bin/git config --local gc.auto 0
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9696061Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9696837Z ##[group]Setting up auth
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9702238Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Run actions/checkout@v4	2026-11-01T20:35:51.9735382Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0167630Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0199498Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0455853Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0490715Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0741499Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0783099Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0783812Z ##[group]Fetching the repository
+test	Run actions/checkout@v4	2026-11-01T20:35:52.0791199Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5d677ef21484b3a6195c73a3d5ac6f447dbe9928:refs/remotes/origin/main
+test	Run actions/checkout@v4	2026-11-01T20:35:52.6925874Z From https://github.com/stefleur/kinufaktur-ai-operations-command-center
+test	Run actions/checkout@v4	2026-11-01T20:35:52.6927790Z  * [new ref]         5d677ef21484b3a6195c73a3d5ac6f447dbe9928 -> origin/main
+test	Run actions/checkout@v4	2026-11-01T20:35:52.6931116Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:52.6932202Z ##[group]Determining the checkout info
+test	Run actions/checkout@v4	2026-11-01T20:35:52.6933407Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:52.6939508Z [command]/usr/bin/git sparse-checkout disable
+test	Run actions/checkout@v4	2026-11-01T20:35:52.6987179Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+test	Run actions/checkout@v4	2026-11-01T20:35:52.7014750Z ##[group]Checking out the ref
+test	Run actions/checkout@v4	2026-11-01T20:35:52.7018127Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+test	Run actions/checkout@v4	2026-11-01T20:35:52.7125427Z Switched to a new branch 'main'
+test	Run actions/checkout@v4	2026-11-01T20:35:52.7129044Z branch 'main' set up to track 'origin/main'.
+test	Run actions/checkout@v4	2026-11-01T20:35:52.7135660Z ##[endgroup]
+test	Run actions/checkout@v4	2026-11-01T20:35:52.7178585Z [command]/usr/bin/git log -1 --format=%H
+test	Run actions/checkout@v4	2026-11-01T20:35:52.7202166Z 5d677ef21484b3a6195c73a3d5ac6f447dbe9928
+test	Run astral-sh/setup-uv@v6	﻿2026-11-01T20:35:52.9289786Z ##[group]Run astral-sh/setup-uv@v6
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9290831Z with:
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9291552Z   version: 0.12.8
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9292339Z   python-version: 3.11
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9293194Z   activate-environment: false
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9295069Z   working-directory: /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9297106Z   server-url: https://github.com
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9305534Z   github-token: ***
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9306337Z   enable-cache: auto
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9308227Z   cache-dependency-glob: **/*requirements*.txt
+test	Run astral-sh/setup-uv@v6	**/*requirements*.in
+test	Run astral-sh/setup-uv@v6	**/*constraints*.txt
+test	Run astral-sh/setup-uv@v6	**/*constraints*.in
+test	Run astral-sh/setup-uv@v6	**/pyproject.toml
+test	Run astral-sh/setup-uv@v6	**/uv.lock
+test	Run astral-sh/setup-uv@v6	**/*.py.lock
+test	Run astral-sh/setup-uv@v6
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9310455Z   restore-cache: true
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9311293Z   save-cache: true
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9312074Z   prune-cache: true
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9312904Z   ignore-nothing-to-cache: false
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9313857Z   ignore-empty-workdir: false
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9314790Z   add-problem-matchers: true
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:52.9315712Z ##[endgroup]
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:53.2160118Z (node:2158) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:53.2162861Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:53.2264400Z manifest-file not provided, reading from local file.
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:53.2304588Z manifest-file does not contain version 0.12.8, arch x86_64, platform unknown-linux-gnu. Falling back to GitHub releases.
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:53.2308184Z Downloading uv from "https://github.com/astral-sh/uv/releases/download/0.12.8/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:53.6635146Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/b29bbe04-91f2-4cb3-bfb4-79bdec3fb8f3 -f /home/runner/work/_temp/c1eb733e-9acd-4461-9048-1d11997a9a32
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.1200343Z Added /home/runner/.local/bin to the path
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.1203089Z Added /opt/hostedtoolcache/uv/0.12.8/x86_64 to the path
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.1204799Z Set UV_PYTHON to 3.11
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.1221541Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.1221918Z Successfully installed uv version 0.12.8
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.1224515Z Searching files using cache dependency glob: /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/**/*requirements*.txt,/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/**/*requirements*.in,/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/**/*constraints*.txt,/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/**/*constraints*.in,/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/**/pyproject.toml,/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/**/uv.lock,/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/**/*.py.lock
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.1379199Z /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/backend/pyproject.toml
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.3127901Z /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/backend/uv.lock
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.3184421Z /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/mcp-server/pyproject.toml
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.3193903Z /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/mcp-server/uv.lock
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.3211446Z Found 4 files to hash.
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.3280168Z Trying to restore uv cache from GitHub Actions cache with key: setup-uv-1-x86_64-unknown-linux-gnu-3.11-pruned-c6992fe0b404ea1ef4ee0c55341e38855d3266707cd8a7c67d6506ab94df3838
+test	Run astral-sh/setup-uv@v6	2026-11-01T20:35:54.5136661Z No GitHub Actions cache found for key: setup-uv-1-x86_64-unknown-linux-gnu-3.11-pruned-c6992fe0b404ea1ef4ee0c55341e38855d3266707cd8a7c67d6506ab94df3838
+test	Run actions/setup-node@v4	﻿2026-11-01T20:35:54.5595092Z ##[group]Run actions/setup-node@v4
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5595375Z with:
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5595586Z   node-version: 22
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5595771Z   always-auth: false
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5595960Z   check-latest: false
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5598037Z   token: ***
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5598217Z env:
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5598390Z   UV_PYTHON: 3.11
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5598625Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.5599110Z ##[endgroup]
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.6794898Z Found in cache @ /opt/hostedtoolcache/node/22.23.4/x64
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.6797272Z (node:2181) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.6797893Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Run actions/setup-node@v4	2026-11-01T20:35:54.6800757Z ##[group]Environment details
+test	Run actions/setup-node@v4	2026-11-01T20:35:55.2274707Z node: v22.23.4
+test	Run actions/setup-node@v4	2026-11-01T20:35:55.2275132Z npm: 10.9.9
+test	Run actions/setup-node@v4	2026-11-01T20:35:55.2276453Z yarn: 1.22.22
+test	Run actions/setup-node@v4	2026-11-01T20:35:55.2277416Z ##[endgroup]
+test	Run make test	﻿2026-11-01T20:35:55.2466445Z ##[group]Run make test
+test	Run make test	2026-11-01T20:35:55.2466735Z ^[[36;1mmake test^[[0m
+test	Run make test	2026-11-01T20:35:55.2501011Z shell: /usr/bin/bash -e {0}
+test	Run make test	2026-11-01T20:35:55.2501261Z env:
+test	Run make test	2026-11-01T20:35:55.2501446Z   UV_PYTHON: 3.11
+test	Run make test	2026-11-01T20:35:55.2501685Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+test	Run make test	2026-11-01T20:35:55.2501952Z ##[endgroup]
+test	Run make test	2026-11-01T20:35:55.3134537Z cd backend && uv sync --locked --group dev && uv run pytest -q
+test	Run make test	2026-11-01T20:35:55.5036775Z Downloading cpython-3.11.16-linux-x86_64-gnu (download) (29.5MiB)
+test	Run make test	2026-11-01T20:35:56.1248479Z  Downloaded cpython-3.11.16-linux-x86_64-gnu (download)
+test	Run make test	2026-11-01T20:35:56.2347607Z Using CPython 3.11.16
+test	Run make test	2026-11-01T20:35:56.2348510Z Creating virtual environment at: .venv
+test	Run make test	2026-11-01T20:35:56.2377219Z Resolved 58 packages in 0.45ms
+test	Run make test	2026-11-01T20:35:56.2680931Z Downloading uvloop (3.6MiB)
+test	Run make test	2026-11-01T20:35:56.2685909Z Downloading pygments (1.2MiB)
+test	Run make test	2026-11-01T20:35:56.2696146Z Downloading psycopg-binary (5.0MiB)
+test	Run make test	2026-11-01T20:35:56.2705318Z Downloading pydantic-core (2.0MiB)
+test	Run make test	2026-11-01T20:35:56.2719520Z Downloading sqlalchemy (3.3MiB)
+test	Run make test	2026-11-01T20:35:56.4747729Z  Downloaded pydantic-core
+test	Run make test	2026-11-01T20:35:56.5150755Z  Downloaded psycopg-binary
+test	Run make test	2026-11-01T20:35:56.5261128Z  Downloaded uvloop
+test	Run make test	2026-11-01T20:35:56.5709180Z  Downloaded sqlalchemy
+test	Run make test	2026-11-01T20:35:56.5753937Z  Downloaded pygments
+test	Run make test	2026-11-01T20:35:56.5755189Z Prepared 55 packages in 336ms
+test	Run make test	2026-11-01T20:35:56.6027261Z Installed 55 packages in 26ms
+test	Run make test	2026-11-01T20:35:56.6027713Z  + agent-detector==2.0.0
+test	Run make test	2026-11-01T20:35:56.6028035Z  + annotated-doc==0.0.5
+test	Run make test	2026-11-01T20:35:56.6028345Z  + annotated-types==0.8.0
+test	Run make test	2026-11-01T20:35:56.6028624Z  + anyio==4.15.1
+test	Run make test	2026-11-01T20:35:56.6029149Z  + certifi==2026.10.23
+test	Run make test	2026-11-01T20:35:56.6029412Z  + click==8.5.0
+test	Run make test	2026-11-01T20:35:56.6029698Z  + detect-installer==0.2.1
+test	Run make test	2026-11-01T20:35:56.6029985Z  + dnspython==2.9.1
+test	Run make test	2026-11-01T20:35:56.6030267Z  + email-validator==2.3.0
+test	Run make test	2026-11-01T20:35:56.6030561Z  + fastapi==0.141.1
+test	Run make test	2026-11-01T20:35:56.6030832Z  + fastapi-cli==0.0.32
+test	Run make test	2026-11-01T20:35:56.6031160Z  + fastapi-cloud-cli==0.26.0
+test	Run make test	2026-11-01T20:35:56.6031468Z  + fastar==0.12.0
+test	Run make test	2026-11-01T20:35:56.6031801Z  + greenlet==3.5.6
+test	Run make test	2026-11-01T20:35:56.6041354Z  + h11==0.16.0
+test	Run make test	2026-11-01T20:35:56.6041692Z  + httpcore==1.0.9
+test	Run make test	2026-11-01T20:35:56.6041955Z  + httptools==0.8.0
+test	Run make test	2026-11-01T20:35:56.6042222Z  + httpx==0.28.1
+test	Run make test	2026-11-01T20:35:56.6042469Z  + idna==3.19
+test	Run make test	2026-11-01T20:35:56.6042715Z  + iniconfig==2.3.0
+test	Run make test	2026-11-01T20:35:56.6043001Z  + jinja2==3.1.6
+test	Run make test	2026-11-01T20:35:56.6043281Z  + markdown-it-py==4.2.0
+test	Run make test	2026-11-01T20:35:56.6043588Z  + markupsafe==3.0.3
+test	Run make test	2026-11-01T20:35:56.6044074Z  + mdurl==0.1.2
+test	Run make test	2026-11-01T20:35:56.6044325Z  + opentelemetry-api==1.45.2
+test	Run make test	2026-11-01T20:35:56.6044556Z  + opentelemetry-sdk==1.45.2
+test	Run make test	2026-11-01T20:35:56.6044836Z  + opentelemetry-semantic-conventions==0.66b2
+test	Run make test	2026-11-01T20:35:56.6045134Z  + packaging==26.3
+test	Run make test	2026-11-01T20:35:56.6045324Z  + pluggy==1.6.0
+test	Run make test	2026-11-01T20:35:56.6045522Z  + psycopg==3.3.6
+test	Run make test	2026-11-01T20:35:56.6045714Z  + psycopg-binary==3.3.6
+test	Run make test	2026-11-01T20:35:56.6045930Z  + pydantic==2.13.5
+test	Run make test	2026-11-01T20:35:56.6046135Z  + pydantic-core==2.46.5
+test	Run make test	2026-11-01T20:35:56.6046363Z  + pydantic-extra-types==2.11.1
+test	Run make test	2026-11-01T20:35:56.6046591Z  + pydantic-settings==2.15.0
+test	Run make test	2026-11-01T20:35:56.6046816Z  + pygments==2.21.0
+test	Run make test	2026-11-01T20:35:56.6046992Z  + pytest==9.1.1
+test	Run make test	2026-11-01T20:35:56.6047175Z  + python-dotenv==1.2.3
+test	Run make test	2026-11-01T20:35:56.6047392Z  + python-multipart==0.0.32
+test	Run make test	2026-11-01T20:35:56.6047596Z  + pyyaml==6.0.3
+test	Run make test	2026-11-01T20:35:56.6047760Z  + rich==15.0.0
+test	Run make test	2026-11-01T20:35:56.6047934Z  + rich-toolkit==0.20.5
+test	Run make test	2026-11-01T20:35:56.6048122Z  + rignore==0.8.1
+test	Run make test	2026-11-01T20:35:56.6048302Z  + sentry-sdk==2.69.2
+test	Run make test	2026-11-01T20:35:56.6048503Z  + shellingham==1.5.4
+test	Run make test	2026-11-01T20:35:56.6048884Z  + sqlalchemy==2.0.53
+test	Run make test	2026-11-01T20:35:56.6049075Z  + starlette==1.6.0
+test	Run make test	2026-11-01T20:35:56.6049252Z  + typer==0.27.2
+test	Run make test	2026-11-01T20:35:56.6049438Z  + typing-extensions==4.16.0
+test	Run make test	2026-11-01T20:35:56.6049653Z  + typing-inspection==0.4.4
+test	Run make test	2026-11-01T20:35:56.6049848Z  + urllib3==2.8.0
+test	Run make test	2026-11-01T20:35:56.6050200Z  + uvicorn==0.53.0
+test	Run make test	2026-11-01T20:35:56.6050373Z  + uvloop==0.22.1
+test	Run make test	2026-11-01T20:35:56.6050546Z  + watchfiles==1.2.0
+test	Run make test	2026-11-01T20:35:56.6050728Z  + websockets==17.1
+test	Run make test	2026-11-01T20:36:02.0480868Z ...........................                                              [100%]
+test	Run make test	2026-11-01T20:36:02.0481605Z =============================== warnings summary ===============================
+test	Run make test	2026-11-01T20:36:02.0482206Z .venv/lib/python3.11/site-packages/fastapi/testclient.py:1
+test	Run make test	2026-11-01T20:36:02.0483942Z   /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/backend/.venv/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+test	Run make test	2026-11-01T20:36:02.0485632Z     from starlette.testclient import TestClient as TestClient  # noqa
+test	Run make test	2026-11-01T20:36:02.0485985Z
+test	Run make test	2026-11-01T20:36:02.0486275Z .venv/lib/python3.11/site-packages/starlette/testclient.py:53
+test	Run make test	2026-11-01T20:36:02.0487968Z   /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/backend/.venv/lib/python3.11/site-packages/starlette/testclient.py:53: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+test	Run make test	2026-11-01T20:36:02.0489890Z     _PortalFactoryType = Callable[[], AbstractContextManager[anyio.abc.BlockingPortal]]
+test	Run make test	2026-11-01T20:36:02.0490331Z
+test	Run make test	2026-11-01T20:36:02.0490668Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+test	Run make test	2026-11-01T20:36:02.0491229Z 27 passed, 2 warnings in 4.52s
+test	Run make test	2026-11-01T20:36:02.2385277Z uv sync --project mcp-server --locked --group dev
+test	Run make test	2026-11-01T20:36:02.2768555Z Using CPython 3.11.16
+test	Run make test	2026-11-01T20:36:02.2769253Z Creating virtual environment at: mcp-server/.venv
+test	Run make test	2026-11-01T20:36:02.2795682Z Resolved 37 packages in 0.57ms
+test	Run make test	2026-11-01T20:36:02.3360705Z Downloading cryptography (4.5MiB)
+test	Run make test	2026-11-01T20:36:02.4078872Z  Downloaded cryptography
+test	Run make test	2026-11-01T20:36:02.4079446Z Prepared 16 packages in 127ms
+test	Run make test	2026-11-01T20:36:02.4201220Z Installed 34 packages in 12ms
+test	Run make test	2026-11-01T20:36:02.4201691Z  + annotated-types==0.8.0
+test	Run make test	2026-11-01T20:36:02.4202001Z  + anyio==4.15.1
+test	Run make test	2026-11-01T20:36:02.4202247Z  + attrs==26.1.0
+test	Run make test	2026-11-01T20:36:02.4202493Z  + certifi==2026.10.23
+test	Run make test	2026-11-01T20:36:02.4202728Z  + cffi==2.1.1
+test	Run make test	2026-11-01T20:36:02.4202951Z  + click==8.5.0
+test	Run make test	2026-11-01T20:36:02.4203192Z  + cryptography==50.0.2
+test	Run make test	2026-11-01T20:36:02.4208501Z  + h11==0.16.0
+test	Run make test	2026-11-01T20:36:02.4209879Z  + httpcore==1.0.9
+test	Run make test	2026-11-01T20:36:02.4210488Z  + httpx==0.28.1
+test	Run make test	2026-11-01T20:36:02.4211071Z  + httpx-sse==0.4.3
+test	Run make test	2026-11-01T20:36:02.4211508Z  + idna==3.20
+test	Run make test	2026-11-01T20:36:02.4211708Z  + iniconfig==2.3.0
+test	Run make test	2026-11-01T20:36:02.4211910Z  + jsonschema==4.26.0
+test	Run make test	2026-11-01T20:36:02.4212167Z  + jsonschema-specifications==2025.9.1
+test	Run make test	2026-11-01T20:36:02.4212419Z  + mcp==1.30.0
+test	Run make test	2026-11-01T20:36:02.4212594Z  + packaging==26.3
+test	Run make test	2026-11-01T20:36:02.4212773Z  + pluggy==1.6.0
+test	Run make test	2026-11-01T20:36:02.4212957Z  + pycparser==3.0
+test	Run make test	2026-11-01T20:36:02.4213144Z  + pydantic==2.13.5
+test	Run make test	2026-11-01T20:36:02.4213337Z  + pydantic-core==2.46.5
+test	Run make test	2026-11-01T20:36:02.4213553Z  + pydantic-settings==2.15.0
+test	Run make test	2026-11-01T20:36:02.4213764Z  + pygments==2.21.0
+test	Run make test	2026-11-01T20:36:02.4213944Z  + pyjwt==2.15.1
+test	Run make test	2026-11-01T20:36:02.4214124Z  + pytest==9.1.1
+test	Run make test	2026-11-01T20:36:02.4214306Z  + python-dotenv==1.2.4
+test	Run make test	2026-11-01T20:36:02.4214510Z  + python-multipart==0.0.32
+test	Run make test	2026-11-01T20:36:02.4214715Z  + referencing==0.37.0
+test	Run make test	2026-11-01T20:36:02.4214902Z  + rpds-py==2026.9.1
+test	Run make test	2026-11-01T20:36:02.4215089Z  + sse-starlette==3.5.0
+test	Run make test	2026-11-01T20:36:02.4215293Z  + starlette==1.7.0
+test	Run make test	2026-11-01T20:36:02.4215483Z  + typing-extensions==4.16.0
+test	Run make test	2026-11-01T20:36:02.4215696Z  + typing-inspection==0.4.4
+test	Run make test	2026-11-01T20:36:02.4215888Z  + uvicorn==0.54.0
+test	Run make test	2026-11-01T20:36:02.4247765Z uv run --project mcp-server --locked pytest -q mcp-server/tests agent-hooks/tests
+test	Run make test	2026-11-01T20:36:04.0027828Z ............                                                             [100%]
+test	Run make test	2026-11-01T20:36:04.0028374Z 12 passed in 1.08s
+test	Run make test	2026-11-01T20:36:04.1267069Z cd frontend && npm ci && npm run test:ci && npm run build
+test	Run make test	2026-11-01T20:36:05.1161829Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+test	Run make test	2026-11-01T20:36:06.3951987Z
+test	Run make test	2026-11-01T20:36:06.3952733Z added 139 packages, and audited 140 packages in 2s
+test	Run make test	2026-11-01T20:36:06.3953084Z
+test	Run make test	2026-11-01T20:36:06.3953218Z 21 packages are looking for funding
+test	Run make test	2026-11-01T20:36:06.3953472Z   run `npm fund` for details
+test	Run make test	2026-11-01T20:36:06.3958887Z
+test	Run make test	2026-11-01T20:36:06.3959042Z found 0 vulnerabilities
+test	Run make test	2026-11-01T20:36:06.4916221Z
+test	Run make test	2026-11-01T20:36:06.4916949Z > kinufaktur-ai-operations-command-center-frontend@0.1.0 test:ci
+test	Run make test	2026-11-01T20:36:06.4917339Z > vitest run
+test	Run make test	2026-11-01T20:36:06.4917450Z
+test	Run make test	2026-11-01T20:36:06.7324647Z
+test	Run make test	2026-11-01T20:36:06.7326563Z ^[[1m^[[30m^[[46m RUN ^[[49m^[[39m^[[22m ^[[36mv5.0.5 ^[[39m^[[90m/home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center/frontend^[[39m
+test	Run make test	2026-11-01T20:36:06.7327477Z
+test	Run make test	2026-11-01T20:36:07.7444037Z  ^[[32m✓^[[39m src/api/tasksApi.test.js ^[[2m(^[[22m^[[2m4 tests^[[22m^[[2m)^[[22m^[[32m 14^[[2mms^[[22m^[[39m
+test	Run make test	2026-11-01T20:36:08.1241540Z  ^[[32m✓^[[39m src/components/OperationsDashboard.test.jsx ^[[2m(^[[22m^[[2m3 tests^[[22m^[[2m)^[[22m^[[33m 351^[[2mms^[[22m^[[39m
+test	Run make test	2026-11-01T20:36:08.2495603Z  ^[[32m✓^[[39m src/App.test.jsx ^[[2m(^[[22m^[[2m4 tests^[[22m^[[2m)^[[22m^[[33m 411^[[2mms^[[22m^[[39m
+test	Run make test	2026-11-01T20:36:08.8335680Z  ^[[32m✓^[[39m src/components/TaskForm.test.jsx ^[[2m(^[[22m^[[2m2 tests^[[22m^[[2m)^[[22m^[[33m 415^[[2mms^[[22m^[[39m
+test	Run make test	2026-11-01T20:36:08.8370061Z
+test	Run make test	2026-11-01T20:36:08.8374913Z ^[[2m Test Files ^[[22m ^[[1m^[[32m4 passed^[[39m^[[22m^[[90m (4)^[[39m
+test	Run make test	2026-11-01T20:36:08.8375683Z ^[[2m      Tests ^[[22m ^[[1m^[[32m13 passed^[[39m^[[22m^[[90m (13)^[[39m
+test	Run make test	2026-11-01T20:36:08.8376221Z ^[[2m   Start at ^[[22m 20:36:06
+test	Run make test	2026-11-01T20:36:08.8381408Z ^[[2m   Duration ^[[22m 2.10s^[[2m (environment 37%, tests 27%, transform 17%, setup 15%, import 3%)^[[22m
+test	Run make test	2026-11-01T20:36:08.8392827Z
+test	Run make test	2026-11-01T20:36:08.9628496Z
+test	Run make test	2026-11-01T20:36:08.9629603Z > kinufaktur-ai-operations-command-center-frontend@0.1.0 build
+test	Run make test	2026-11-01T20:36:08.9630202Z > vite build
+test	Run make test	2026-11-01T20:36:08.9630377Z
+test	Run make test	2026-11-01T20:36:09.1443358Z ^[[36mvite v7.3.7 ^[[32mbuilding client environment for production...^[[36m^[[39m
+test	Run make test	2026-11-01T20:36:09.2100417Z transforming...
+test	Run make test	2026-11-01T20:36:09.9910433Z ^[[32m✓^[[39m 37 modules transformed.
+test	Run make test	2026-11-01T20:36:10.1297865Z rendering chunks...
+test	Run make test	2026-11-01T20:36:10.1365863Z computing gzip size...
+test	Run make test	2026-11-01T20:36:10.1445283Z ^[[2mdist/^[[22m^[[32mindex.html                 ^[[39m^[[1m^[[2m  0.57 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  0.34 kB^[[22m
+test	Run make test	2026-11-01T20:36:10.1447077Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[35mindex-BmYyM3R1.css  ^[[39m^[[1m^[[2m 11.79 kB^[[22m^[[1m^[[22m^[[2m │ gzip:  3.49 kB^[[22m
+test	Run make test	2026-11-01T20:36:10.1448427Z ^[[2mdist/^[[22m^[[2massets/^[[22m^[[36mindex-Bkl5i5h8.js   ^[[39m^[[1m^[[2m238.82 kB^[[22m^[[1m^[[22m^[[2m │ gzip: 74.28 kB^[[22m
+test	Run make test	2026-11-01T20:36:10.1449328Z ^[[32m✓ built in 980ms^[[39m
+test	Build and start PostgreSQL integration stack	﻿2026-11-01T20:36:10.1871034Z ##[group]Run docker compose up --build -d --wait
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:10.1871401Z ^[[36;1mdocker compose up --build -d --wait^[[0m
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:10.1898650Z shell: /usr/bin/bash -e {0}
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:10.1899037Z env:
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:10.1899203Z   UV_PYTHON: 3.11
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:10.1899434Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:10.1899701Z ##[endgroup]
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:10.4140623Z  Image postgres:17-alpine Pulling
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3582613Z  d5bf1ad711f7 Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3600556Z  694a01b64034 Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3627836Z  7b229517ed22 Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3628414Z  d6e09b1bfe5f Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3629163Z  f5e975d661d7 Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3629615Z  e018eb860c5e Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3630024Z  9098654d3377 Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3630427Z  fa5e490e3893 Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3630857Z  7a82a00c713d Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.3631322Z  dddde5442af4 Pulling fs layer 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.5169170Z  694a01b64034 Downloading 4.194MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.5177161Z  f5e975d661d7 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6171766Z  e018eb860c5e Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6173705Z  fa5e490e3893 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6177363Z  9098654d3377 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6180011Z  dddde5442af4 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6182239Z  d5bf1ad711f7 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6182985Z  694a01b64034 Downloading 10.49MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6185426Z  7b229517ed22 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6187850Z  7a82a00c713d Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6190694Z  d6e09b1bfe5f Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.6243518Z  7b229517ed22 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.7178165Z  694a01b64034 Downloading 30.41MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.7266434Z  7b229517ed22 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.8166233Z  112f26c8faed Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.8166893Z  e22336567ca8 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.8168611Z  694a01b64034 Downloading 58.72MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.8200770Z  fa5e490e3893 Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.8227777Z  9098654d3377 Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.8239334Z  dddde5442af4 Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.8260049Z  7b229517ed22 Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:11.9162371Z  694a01b64034 Downloading 90.18MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.0168550Z  694a01b64034 Downloading 112.4MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.1171565Z  694a01b64034 Downloading 112.4MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.2172904Z  694a01b64034 Downloading 112.4MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.3163741Z  694a01b64034 Downloading 112.4MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.4167606Z  694a01b64034 Downloading 112.4MB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.6176882Z  694a01b64034 Download complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.6226994Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.7227711Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.8239569Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:12.9240838Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.0236735Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.1216233Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.2237333Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.3234758Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.4226650Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.5231844Z  694a01b64034 Extracting 1B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.6256692Z  694a01b64034 Extracting 2B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.7225972Z  694a01b64034 Extracting 2B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.8230172Z  694a01b64034 Extracting 2B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.9169967Z  f5e975d661d7 Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.9178651Z  e018eb860c5e Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.9189904Z  d5bf1ad711f7 Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.9206039Z  7a82a00c713d Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.9219248Z  d6e09b1bfe5f Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.9280523Z  694a01b64034 Pull complete 0B
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:13.9281275Z  Image postgres:17-alpine Pulled
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.1910455Z  Image kinufaktur-operations-demo-dependency Building
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.1911446Z  Image kinufaktur-operations-backend Building
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.1911888Z  Image kinufaktur-operations-frontend Building
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.2471265Z #1 [internal] load local bake definitions
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.3807877Z #1 reading from stdin 2.03kB done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.3808397Z #1 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5485949Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5486937Z #2 [frontend internal] load build definition from Dockerfile
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5487405Z #2 transferring dockerfile: 573B done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5487647Z #2 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5487762Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5488013Z #3 [demo-dependency internal] load build definition from Dockerfile
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5488366Z #3 transferring dockerfile: 893B done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5488588Z #3 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5488885Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.5489138Z #4 [backend internal] load metadata for docker.io/library/python:3.11-slim
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7178899Z #4 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7179097Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7179334Z #5 [auth] library/node:pull token for registry-1.docker.io
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7179659Z #5 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7179768Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7179958Z #6 [auth] library/nginx:pull token for registry-1.docker.io
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7180235Z #6 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7180337Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7180517Z #7 [auth] library/python:pull token for registry-1.docker.io
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.7180782Z #7 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.8681803Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:14.8682503Z #8 [backend internal] load metadata for ghcr.io/astral-sh/uv:0.12.23
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.2970929Z #8 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.2971204Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.2971656Z #9 [frontend internal] load metadata for docker.io/library/nginx:stable-alpine
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.2972190Z #9 DONE 0.9s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5080013Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5081285Z #4 [demo-dependency internal] load metadata for docker.io/library/python:3.11-slim
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5081904Z #4 DONE 0.9s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5082081Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5082491Z #10 [frontend internal] load metadata for docker.io/library/node:22-alpine
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5083047Z #10 DONE 0.9s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5083217Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5083424Z #11 [frontend internal] load .dockerignore
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5083851Z #11 transferring context: 76B done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5084177Z #11 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5084326Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5084540Z #12 [frontend internal] load build context
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5084973Z #12 transferring context: 146.53kB done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5085311Z #12 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5085465Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5085699Z #8 [backend internal] load metadata for ghcr.io/astral-sh/uv:0.12.23
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5086107Z #8 DONE 0.9s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5086258Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5086518Z #13 [demo-dependency internal] load .dockerignore
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5087019Z #13 transferring context: 112B done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5087361Z #13 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5087510Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5088235Z #14 [backend stage-0 1/7] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.5089738Z #14 resolve docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60 0.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6764210Z #14 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6764469Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6764727Z #15 [demo-dependency internal] load build context
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6765155Z #15 transferring context: 432.25kB done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6765515Z #15 DONE 0.2s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6765659Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6766432Z #14 [demo-dependency stage-0 1/7] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.6767960Z #14 sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 251B / 251B 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.7920584Z #14 sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 251B / 251B 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.7922374Z #14 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 14.46MB / 14.46MB 0.2s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.7923501Z #14 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 1.29MB / 1.29MB 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.9478390Z #14 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 14.46MB / 14.46MB 0.2s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.9479556Z #14 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 1.29MB / 1.29MB 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:15.9480283Z #14 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 16.78MB / 29.86MB 0.2s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.0975479Z #14 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.3s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.5341140Z #14 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.8s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.6477429Z #14 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8479309Z #14 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8481268Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8482640Z #16 [frontend stage-1 1/3] FROM docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8484357Z #16 resolve docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949 0.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8485867Z #16 sha256:5b8cb54cfa408030aaa43d7bffa9141e0ae6f8a479df13c7aa152100cca358fb 20.31MB / 20.31MB 0.7s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8487156Z #16 sha256:bb658a2541968d2b90a8ee165ad08b7f71055c7f7832bdff98e2de2d8b90cf14 1.40kB / 1.40kB 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8488377Z #16 sha256:81b64ae234ef95f3cfc19b7f6c45a511eccbefa6148889ee33ed43c6c3f39939 1.21kB / 1.21kB 0.4s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8489881Z #16 sha256:e125989d16f03d1e00b60afdd9abe46ed1437ed63b73926d036a5537f6be770a 403B / 403B 0.2s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8491098Z #16 sha256:f19a2d3b695178ba0e57d473535f74f5d934f45e191de8334e730f83d2c62704 627B / 627B 0.2s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8492301Z #16 sha256:9f0afb44f10e826253b342c0265e188067c2f0a30c782a52e329928a763adc60 1.88MB / 1.88MB 0.2s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8493542Z #16 sha256:885725a63a7cf1d4d5aac105944b35ece2b69a8c2cc6f7040f04727b7b8a63d2 964B / 964B 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8494682Z #16 extracting sha256:9f0afb44f10e826253b342c0265e188067c2f0a30c782a52e329928a763adc60 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.8495449Z #16 DONE 1.5s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9619729Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9623304Z #16 [frontend stage-1 1/3] FROM docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9624395Z #16 extracting sha256:f19a2d3b695178ba0e57d473535f74f5d934f45e191de8334e730f83d2c62704 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9625565Z #16 extracting sha256:885725a63a7cf1d4d5aac105944b35ece2b69a8c2cc6f7040f04727b7b8a63d2 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9626578Z #16 extracting sha256:e125989d16f03d1e00b60afdd9abe46ed1437ed63b73926d036a5537f6be770a done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9627646Z #16 extracting sha256:81b64ae234ef95f3cfc19b7f6c45a511eccbefa6148889ee33ed43c6c3f39939 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9628932Z #16 extracting sha256:bb658a2541968d2b90a8ee165ad08b7f71055c7f7832bdff98e2de2d8b90cf14 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:16.9630237Z #16 extracting sha256:5b8cb54cfa408030aaa43d7bffa9141e0ae6f8a479df13c7aa152100cca358fb
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1232890Z #16 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1233315Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1234257Z #17 [backend] FROM ghcr.io/astral-sh/uv:0.12.23@sha256:61d393e44e249f2e4b526b6c7ddcecce245946826e608e11c93ad4f5bba55b21
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1235789Z #17 resolve ghcr.io/astral-sh/uv:0.12.23@sha256:61d393e44e249f2e4b526b6c7ddcecce245946826e608e11c93ad4f5bba55b21 0.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1237418Z #17 sha256:dcd00f4c468462b2a68c19a552a5b67c3fd23b41967f8622f7f1620cad1d105d 96B / 96B 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1238656Z #17 sha256:f3f7502ac07c10bd911c63b27afb9b3f5902b8554ccbe381bde627178ad1915b 23.67MB / 23.67MB 1.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1239889Z #17 extracting sha256:f3f7502ac07c10bd911c63b27afb9b3f5902b8554ccbe381bde627178ad1915b 0.4s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1240803Z #17 extracting sha256:dcd00f4c468462b2a68c19a552a5b67c3fd23b41967f8622f7f1620cad1d105d 0.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.1241292Z #17 DONE 1.6s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.2734782Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.2736398Z #18 [frontend build 1/8] FROM docker.io/library/node:22-alpine@sha256:fe4f6d74e20370acb04ad889077d14d0f64a9c8ea6a42bc60cddf1e844699914
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.2738968Z #18 resolve docker.io/library/node:22-alpine@sha256:fe4f6d74e20370acb04ad889077d14d0f64a9c8ea6a42bc60cddf1e844699914 0.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.2741419Z #18 sha256:304511616d6a6d472222f696b9045e20dc90e8043b2a8ba2acb61746595781f3 442B / 442B 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.2743359Z #18 sha256:7246d4c6a55dd0f8dd00d2e63aece3a68d91e6a5d04c4e748fc2706897d96312 1.26MB / 1.26MB 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.2744961Z #18 sha256:8776aa3d2ba7247a375d06dcec03856b99dbb0e16e904a5672d3bf08c852d4f1 56.22MB / 56.22MB 1.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.2746925Z #18 extracting sha256:8776aa3d2ba7247a375d06dcec03856b99dbb0e16e904a5672d3bf08c852d4f1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.3262671Z #18 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.3262922Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.3263785Z #16 [frontend stage-1 1/3] FROM docker.io/library/nginx:stable-alpine@sha256:0e52bd054126cdc040b1276c0af347aeb02a41b9cfe305d6094767ac30e97949
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.3265040Z #16 extracting sha256:5b8cb54cfa408030aaa43d7bffa9141e0ae6f8a479df13c7aa152100cca358fb 0.4s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.3265677Z #16 DONE 2.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.4551033Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.4552494Z #14 [backend stage-0 1/7] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.4554038Z #14 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0.8s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.4555247Z #14 extracting sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.6062761Z #14 extracting sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.6063921Z #14 extracting sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.7555701Z #14 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.7556004Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.7556837Z #18 [frontend build 1/8] FROM docker.io/library/node:22-alpine@sha256:fe4f6d74e20370acb04ad889077d14d0f64a9c8ea6a42bc60cddf1e844699914
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.7558009Z #18 extracting sha256:8776aa3d2ba7247a375d06dcec03856b99dbb0e16e904a5672d3bf08c852d4f1 1.2s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.7558602Z #18 DONE 2.4s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.9447450Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.9448554Z #18 [frontend build 1/8] FROM docker.io/library/node:22-alpine@sha256:fe4f6d74e20370acb04ad889077d14d0f64a9c8ea6a42bc60cddf1e844699914
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.9449699Z #18 extracting sha256:7246d4c6a55dd0f8dd00d2e63aece3a68d91e6a5d04c4e748fc2706897d96312 0.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.9450285Z #18 extracting sha256:304511616d6a6d472222f696b9045e20dc90e8043b2a8ba2acb61746595781f3 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.9450627Z #18 DONE 2.5s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.9450729Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:17.9450873Z #19 [frontend build 2/8] WORKDIR /app
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.6870586Z #19 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.6870933Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.6871709Z #14 [demo-dependency stage-0 1/7] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.6872483Z #14 extracting sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 0.6s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.6873067Z #14 extracting sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 0.5s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.6873421Z #14 DONE 3.1s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.8373362Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:18.8374336Z #20 [demo-dependency stage-0 2/7] COPY --from=ghcr.io/astral-sh/uv:0.12.23 /uv /usr/local/bin/uv
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.1738646Z #20 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.1739797Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.1740096Z #19 [frontend build 2/8] WORKDIR /app
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.1740485Z #19 DONE 5.4s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4223944Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4225377Z #20 [demo-dependency stage-0 2/7] COPY --from=ghcr.io/astral-sh/uv:0.12.23 /uv /usr/local/bin/uv
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4227004Z #20 DONE 4.6s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4227152Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4227496Z #21 [frontend build 3/8] COPY package*.json ./
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4227827Z #21 DONE 0.1s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4227957Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4228252Z #22 [backend stage-0 3/7] WORKDIR /app
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4228551Z #22 DONE 0.1s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4228946Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4229120Z #23 [frontend build 4/8] COPY src ./src
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4229426Z #23 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4229546Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4229935Z #24 [backend stage-0 4/7] COPY pyproject.toml uv.lock ./
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4230371Z #24 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4230664Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4230875Z #25 [frontend build 5/8] COPY index.html ./
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4231359Z #25 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4231515Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4231736Z #26 [frontend build 6/8] COPY vite.config.js ./
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4232237Z #26 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4232376Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.4232891Z #27 [backend stage-0 5/7] RUN uv sync --locked --no-dev --no-install-project
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.5516520Z #27 0.303 Using CPython 3.11.18 interpreter at: /usr/local/bin/python3
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.7965716Z #27 0.304 Creating virtual environment at: .venv
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.7966349Z #27 0.308 Resolved 58 packages in 1ms
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.7966800Z #27 0.378 Downloading uvloop (3.6MiB)
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.7967234Z #27 0.391 Downloading psycopg-binary (5.0MiB)
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.7967725Z #27 0.391 Downloading pydantic-core (2.0MiB)
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.7968150Z #27 0.398 Downloading pygments (1.2MiB)
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:23.7968614Z #27 0.398 Downloading sqlalchemy (3.3MiB)
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0875538Z #27 0.596  Downloaded pydantic-core
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0876100Z #27 0.604  Downloaded pygments
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0876485Z #27 0.618  Downloaded uvloop
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0876879Z #27 0.625  Downloaded sqlalchemy
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0877280Z #27 0.630  Downloaded psycopg-binary
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0877702Z #27 0.631 Prepared 51 packages in 320ms
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0878167Z #27 0.677 Installed 51 packages in 46ms
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0878592Z #27 0.677  + agent-detector==2.0.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0879162Z #27 0.677  + annotated-doc==0.0.5
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0879565Z #27 0.678  + annotated-types==0.8.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0879925Z #27 0.678  + anyio==4.15.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0880275Z #27 0.678  + certifi==2026.10.23
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0880616Z #27 0.678  + click==8.5.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0880978Z #27 0.678  + detect-installer==0.2.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0881343Z #27 0.679  + dnspython==2.9.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0881747Z #27 0.679  + email-validator==2.3.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0882104Z #27 0.679  + fastapi==0.141.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0882465Z #27 0.679  + fastapi-cli==0.0.32
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0882869Z #27 0.679  + fastapi-cloud-cli==0.26.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0883242Z #27 0.680  + fastar==0.12.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0883564Z #27 0.680  + greenlet==3.5.6
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0883876Z #27 0.680  + h11==0.16.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0884192Z #27 0.680  + httpcore==1.0.9
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0884520Z #27 0.680  + httptools==0.8.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0884842Z #27 0.681  + httpx==0.28.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0885159Z #27 0.681  + idna==3.19
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0885466Z #27 0.681  + jinja2==3.1.6
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0885808Z #27 0.682  + markdown-it-py==4.2.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0886186Z #27 0.682  + markupsafe==3.0.3
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0886517Z #27 0.682  + mdurl==0.1.2
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0886884Z #27 0.682  + opentelemetry-api==1.45.2
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0887320Z #27 0.682  + opentelemetry-sdk==1.45.2
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0888953Z #27 0.682  + opentelemetry-semantic-conventions==0.66b2
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0889438Z #27 0.682  + psycopg==3.3.6
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0889814Z #27 0.682  + psycopg-binary==3.3.6
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0890176Z #27 0.682  + pydantic==2.13.5
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0890563Z #27 0.682  + pydantic-core==2.46.5
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0891280Z #27 0.682  + pydantic-extra-types==2.11.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0891735Z #27 0.682  + pydantic-settings==2.15.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0892540Z #27 0.682  + pygments==2.21.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0892998Z #27 0.683  + python-dotenv==1.2.3
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0893459Z #27 0.683  + python-multipart==0.0.32
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0894203Z #27 0.683  + pyyaml==6.0.3
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0894642Z #27 0.683  + rich==15.0.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0895013Z #27 0.683  + rich-toolkit==0.20.5
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0895360Z #27 0.683  + rignore==0.8.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0895681Z #27 0.683  + sentry-sdk==2.69.2
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0896013Z #27 0.683  + shellingham==1.5.4
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0896388Z #27 0.683  + sqlalchemy==2.0.53
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0896741Z #27 0.683  + starlette==1.6.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0897078Z #27 0.683  + typer==0.27.2
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0897460Z #27 0.683  + typing-extensions==4.16.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0897874Z #27 0.683  + typing-inspection==0.4.4
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0898238Z #27 0.684  + urllib3==2.8.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0898561Z #27 0.684  + uvicorn==0.53.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0899115Z #27 0.684  + uvloop==0.22.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0899468Z #27 0.684  + watchfiles==1.2.0
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.0899810Z #27 0.684  + websockets==17.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.6026828Z #27 DONE 1.2s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.6028593Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.6029404Z #28 [demo-dependency stage-0 6/7] COPY ./app ./app
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.7537897Z #28 DONE 0.1s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.7539057Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:24.7539948Z #29 [demo-dependency stage-0 7/7] RUN useradd --uid 10001 --create-home appuser && mkdir -p /data && chown -R appuser:appuser /data /app
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7585016Z #29 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7585340Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7585480Z #30 [frontend build 7/8] RUN npm ci
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7586342Z #30 1.286 npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7586887Z #30 2.817
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7587219Z #30 2.817 added 138 packages, and audited 139 packages in 3s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7587486Z #30 2.817
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7587865Z #30 2.817 21 packages are looking for funding
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7588295Z #30 2.817   run `npm fund` for details
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7588660Z #30 2.818
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7589105Z #30 2.818 found 0 vulnerabilities
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7589353Z #30 2.819 npm notice
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7589780Z #30 2.819 npm notice New major version of npm available! 10.9.9 -> 12.2.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7590267Z #30 2.819 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7590830Z #30 2.819 npm notice To update run: npm install -g npm@12.2.1
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7591114Z #30 2.819 npm notice
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.7591389Z #30 DONE 3.5s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.9093531Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:26.9094404Z #31 [frontend build 8/8] RUN npm run build
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.0561378Z #31 0.297
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.0562131Z #31 0.297 > kinufaktur-ai-operations-command-center-frontend@0.1.0 build
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.0562715Z #31 0.297 > vite build
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.0563015Z #31 0.297
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.3417757Z #31 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.3418606Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.3419785Z #29 [demo-dependency stage-0 7/7] RUN useradd --uid 10001 --create-home appuser && mkdir -p /data && chown -R appuser:appuser /data /app
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.3420713Z #29 DONE 2.6s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.4061650Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.4063241Z #31 [frontend build 8/8] RUN npm run build
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.4064232Z #31 0.646 vite v7.3.7 building client environment for production...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:27.6366579Z #31 0.727 transforming...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.0246266Z #31 2.265 ✓ 37 modules transformed.
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.3029427Z #31 2.543 rendering chunks...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.4711126Z #31 2.548 computing gzip size...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.4712453Z #31 2.561 dist/index.html                   0.57 kB │ gzip:  0.34 kB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.4714217Z #31 2.561 dist/assets/index-BmYyM3R1.css   11.79 kB │ gzip:  3.49 kB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.4715490Z #31 2.561 dist/assets/index-CTuBsv3S.js   238.77 kB │ gzip: 74.25 kB
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.4716436Z #31 2.561 ✓ built in 1.88s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.6080947Z #31 DONE 2.8s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.6081160Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.6081320Z #32 [demo-dependency] exporting to image
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.6081602Z #32 exporting layers
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.8214106Z #32 ...
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.8214344Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.8214647Z #33 [frontend stage-1 2/3] COPY --from=build /app/dist /usr/share/nginx/html
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.8215167Z #33 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.8215877Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.8216291Z #34 [frontend stage-1 3/3] COPY nginx.conf /etc/nginx/conf.d/default.conf
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.8216845Z #34 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9674198Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9679605Z #35 [frontend] exporting to image
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9680345Z #35 exporting layers 0.1s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9681156Z #35 exporting manifest sha256:b3ccdc4a04a3b356de01b1cb742634047b2df8f339dc66b04bad717336dc39d9 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9682177Z #35 exporting config sha256:b9533eff51577784b7688e9776f6dcc71281934c4f03118fc29ac0abd349e93e done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9683339Z #35 exporting attestation manifest sha256:69879668cdb6b7a9fed7fcec98dc912ead076e674bab01046dbed43361c0659c done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9684470Z #35 exporting manifest list sha256:c0f3de67aab938b9f30c5765dc1400580bcc7ac3e836f4c6719c40840976357d done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9685386Z #35 naming to docker.io/library/kinufaktur-operations-frontend:latest done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9686195Z #35 unpacking to docker.io/library/kinufaktur-operations-frontend:latest 0.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9686704Z #35 DONE 0.1s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9686851Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:29.9687102Z #36 [frontend] resolving provenance for metadata file
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:30.1304353Z #36 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:30.1304621Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:30.1304830Z #37 [backend] exporting to image
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:31.1316268Z #37 exporting layers 3.9s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:31.3093701Z #37 exporting manifest sha256:65aae4042d3cf1a260f0a46a85a93aa4f8e375e2c3eb644d43604900d9e7c0a6 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:31.3094854Z #37 exporting config sha256:34518b5aee71ad1f9817b63af59158b6872b886579f22082162a08dd162d5115 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:31.3097073Z #37 exporting attestation manifest sha256:71534b5cda8d579e36e02e1dc699791bd8d614322d9ff7e2cef6ea5c8431d598 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:31.3098220Z #37 exporting manifest list sha256:31e4d4840b680aabbf627e700e1ae895d24b5a9a24e54cf0a11d875c10e1cfdc done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:31.3100216Z #37 naming to docker.io/library/kinufaktur-operations-backend:latest done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:31.3101182Z #37 unpacking to docker.io/library/kinufaktur-operations-backend:latest
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.1636726Z #37 unpacking to docker.io/library/kinufaktur-operations-backend:latest 2.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2428025Z #37 DONE 6.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2428295Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2428516Z #32 [demo-dependency] exporting to image
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2429053Z #32 exporting layers 3.9s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2429765Z #32 exporting manifest sha256:bb598864c5cfdfb948847be3e6003607794ac4d943dde5a6a1e546300b1fbb7e done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2430758Z #32 exporting config sha256:daba6c10e5ccfab435c19824a19c78e82ae707df11ba05141b48cffd35c19d64 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2431557Z #32 exporting attestation manifest sha256:3726920ad2aa369b987f01a9d4607af92b1e77c87ff7bd75b7a20b56383749b8 done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2432471Z #32 exporting manifest list sha256:52d8e249b7799638cfff831e42df15b577a0c21c332852ebc40cd1effb9ca94c done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2433155Z #32 naming to docker.io/library/kinufaktur-operations-demo-dependency:latest done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2433841Z #32 unpacking to docker.io/library/kinufaktur-operations-demo-dependency:latest 2.0s done
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2434580Z #32 DONE 6.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2434703Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2434859Z #38 [backend] resolving provenance for metadata file
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2435114Z #38 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2435205Z
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2435462Z #39 [demo-dependency] resolving provenance for metadata file
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2435727Z #39 DONE 0.0s
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2436004Z  Image kinufaktur-operations-demo-dependency Built
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2436536Z  Image kinufaktur-operations-backend Built
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2436822Z  Image kinufaktur-operations-frontend Built
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2448581Z  Network kinufaktur-operations_default Creating
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2718022Z  Network kinufaktur-operations_default Created
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2722845Z  Volume kinufaktur-operations_telemetry_data Creating
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2738249Z  Volume kinufaktur-operations_telemetry_data Created
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2740299Z  Volume kinufaktur-operations_db_data Creating
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2746824Z  Volume kinufaktur-operations_db_data Created
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2755408Z  Container kinufaktur-operations-postgres-1 Creating
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:33.2755963Z  Container kinufaktur-operations-demo-dependency-1 Creating
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.1567871Z  Container kinufaktur-operations-postgres-1 Created
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.1568901Z  Container kinufaktur-operations-demo-dependency-1 Created
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.1569597Z  Container kinufaktur-operations-backend-1 Creating
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.1836736Z  Container kinufaktur-operations-backend-1 Created
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.1837363Z  Container kinufaktur-operations-frontend-1 Creating
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.2073545Z  Container kinufaktur-operations-frontend-1 Created
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.2246421Z  Container kinufaktur-operations-demo-dependency-1 Starting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.2247131Z  Container kinufaktur-operations-postgres-1 Starting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.3958177Z  Container kinufaktur-operations-demo-dependency-1 Started
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.4042504Z  Container kinufaktur-operations-postgres-1 Started
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.4043525Z  Container kinufaktur-operations-postgres-1 Waiting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:35.4044245Z  Container kinufaktur-operations-demo-dependency-1 Waiting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:38.9053187Z  Container kinufaktur-operations-postgres-1 Healthy
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:38.9053722Z  Container kinufaktur-operations-demo-dependency-1 Healthy
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:38.9054174Z  Container kinufaktur-operations-backend-1 Starting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:39.0422305Z  Container kinufaktur-operations-backend-1 Started
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:39.0422964Z  Container kinufaktur-operations-backend-1 Waiting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:42.5433965Z  Container kinufaktur-operations-backend-1 Healthy
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:42.5434553Z  Container kinufaktur-operations-frontend-1 Starting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:42.6726134Z  Container kinufaktur-operations-frontend-1 Started
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:42.6726593Z  Container kinufaktur-operations-postgres-1 Waiting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:42.6727124Z  Container kinufaktur-operations-demo-dependency-1 Waiting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:42.6727519Z  Container kinufaktur-operations-backend-1 Waiting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:42.6727846Z  Container kinufaktur-operations-frontend-1 Waiting
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:43.1746159Z  Container kinufaktur-operations-postgres-1 Healthy
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:43.1746629Z  Container kinufaktur-operations-backend-1 Healthy
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:43.1747072Z  Container kinufaktur-operations-demo-dependency-1 Healthy
+test	Build and start PostgreSQL integration stack	2026-11-01T20:36:53.1736236Z  Container kinufaktur-operations-frontend-1 Healthy
+test	Run make smoke demo-incident	﻿2026-11-01T20:36:53.1859424Z ##[group]Run make smoke demo-incident
+test	Run make smoke demo-incident	2026-11-01T20:36:53.1859731Z ^[[36;1mmake smoke demo-incident^[[0m
+test	Run make smoke demo-incident	2026-11-01T20:36:53.1887243Z shell: /usr/bin/bash -e {0}
+test	Run make smoke demo-incident	2026-11-01T20:36:53.1887463Z env:
+test	Run make smoke demo-incident	2026-11-01T20:36:53.1887626Z   UV_PYTHON: 3.11
+test	Run make smoke demo-incident	2026-11-01T20:36:53.1887857Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+test	Run make smoke demo-incident	2026-11-01T20:36:53.1888134Z ##[endgroup]
+test	Run make smoke demo-incident	2026-11-01T20:36:53.1950035Z python3 scripts/smoke.py
+test	Run make smoke demo-incident	2026-11-01T20:36:53.3234244Z Health and persistent task CRUD smoke passed
+test	Run make smoke demo-incident	2026-11-01T20:36:53.3320868Z python3 scripts/demo_incident.py --base-url http://localhost:8000 --output evidence/demo-incident.json
+test	Run make smoke demo-incident	2026-11-01T20:36:53.4772743Z Verified live incident 33fb4b1f-ed26-439c-a070-be1274e8ccb1; trace 55b1ed4ed28383c74d074428f90125ff; evidence: evidence/demo-incident.json
+test	Verify PostgreSQL persistence across backend restart	﻿2026-11-01T20:36:53.4955350Z ##[group]Run python3 scripts/persistence.py
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.4955702Z ^[[36;1mpython3 scripts/persistence.py^[[0m
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.4983055Z shell: /usr/bin/bash -e {0}
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.4983275Z env:
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.4983440Z   UV_PYTHON: 3.11
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.4983660Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.4983924Z ##[endgroup]
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.6367007Z  Container kinufaktur-operations-backend-1 Restarting
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.6367705Z  Container kinufaktur-operations-postgres-1 Restarting
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:36:53.9625849Z  Container kinufaktur-operations-postgres-1 Started
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:37:03.9171943Z  Container kinufaktur-operations-backend-1 Started
+test	Verify PostgreSQL persistence across backend restart	2026-11-01T20:37:04.9635170Z PostgreSQL task and telemetry incident persistence across container restarts verified
+test	Run actions/upload-artifact@v4	﻿2026-11-01T20:37:04.9908391Z ##[group]Run actions/upload-artifact@v4
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9908662Z with:
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9909045Z   name: runtime-evidence
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9909237Z   path: evidence/
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9909416Z   if-no-files-found: warn
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9909613Z   compression-level: 6
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9909791Z   overwrite: false
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9909972Z   include-hidden-files: false
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9910168Z env:
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9910320Z   UV_PYTHON: 3.11
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9910523Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:04.9910771Z ##[endgroup]
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.1319596Z (node:4485) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.1320314Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.1363216Z With the provided path, there will be 1 file uploaded
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.1367828Z Artifact name is valid!
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.1368409Z Root directory input is valid!
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.4785088Z Beginning upload of artifact content to blob storage
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.4974159Z (node:4485) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.6983788Z Uploaded bytes 2690
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.7544463Z Finished uploading artifact content to blob storage!
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.7545203Z SHA256 digest of uploaded artifact zip is 0fa14f342f4d4cb5788a0ee939dd7f5841cf2ee098849e2c98d79e9746ab69e8
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:05.7545666Z Finalizing artifact upload
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:06.2505488Z Artifact runtime-evidence.zip successfully finalized. Artifact ID 13100171674
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:06.2506207Z Artifact runtime-evidence has been successfully uploaded! Final size is 2690 bytes. Artifact ID is 13100171674
+test	Run actions/upload-artifact@v4	2026-11-01T20:37:06.2507059Z Artifact download URL: https://github.com/stefleur/kinufaktur-ai-operations-command-center/actions/runs/41347664484/artifacts/13100171674
+test	Run docker compose down	﻿2026-11-01T20:37:06.2673124Z ##[group]Run docker compose down
+test	Run docker compose down	2026-11-01T20:37:06.2673403Z ^[[36;1mdocker compose down^[[0m
+test	Run docker compose down	2026-11-01T20:37:06.2700277Z shell: /usr/bin/bash -e {0}
+test	Run docker compose down	2026-11-01T20:37:06.2700500Z env:
+test	Run docker compose down	2026-11-01T20:37:06.2700667Z   UV_PYTHON: 3.11
+test	Run docker compose down	2026-11-01T20:37:06.2700892Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+test	Run docker compose down	2026-11-01T20:37:06.2701162Z ##[endgroup]
+test	Run docker compose down	2026-11-01T20:37:06.3376032Z  Container kinufaktur-operations-frontend-1 Stopping
+test	Run docker compose down	2026-11-01T20:37:06.5231270Z  Container kinufaktur-operations-frontend-1 Stopped
+test	Run docker compose down	2026-11-01T20:37:06.5231908Z  Container kinufaktur-operations-frontend-1 Removing
+test	Run docker compose down	2026-11-01T20:37:06.5313469Z  Container kinufaktur-operations-frontend-1 Removed
+test	Run docker compose down	2026-11-01T20:37:06.5314106Z  Container kinufaktur-operations-backend-1 Stopping
+test	Run docker compose down	2026-11-01T20:37:16.6436321Z  Container kinufaktur-operations-backend-1 Stopped
+test	Run docker compose down	2026-11-01T20:37:16.6436943Z  Container kinufaktur-operations-backend-1 Removing
+test	Run docker compose down	2026-11-01T20:37:16.7211273Z  Container kinufaktur-operations-backend-1 Removed
+test	Run docker compose down	2026-11-01T20:37:16.7212026Z  Container kinufaktur-operations-demo-dependency-1 Stopping
+test	Run docker compose down	2026-11-01T20:37:16.7212577Z  Container kinufaktur-operations-postgres-1 Stopping
+test	Run docker compose down	2026-11-01T20:37:16.8125039Z  Container kinufaktur-operations-postgres-1 Stopped
+test	Run docker compose down	2026-11-01T20:37:16.8125710Z  Container kinufaktur-operations-postgres-1 Removing
+test	Run docker compose down	2026-11-01T20:37:16.8198339Z  Container kinufaktur-operations-postgres-1 Removed
+test	Run docker compose down	2026-11-01T20:37:26.8145161Z  Container kinufaktur-operations-demo-dependency-1 Stopped
+test	Run docker compose down	2026-11-01T20:37:26.8145975Z  Container kinufaktur-operations-demo-dependency-1 Removing
+test	Run docker compose down	2026-11-01T20:37:26.8255000Z  Container kinufaktur-operations-demo-dependency-1 Removed
+test	Run docker compose down	2026-11-01T20:37:26.8262576Z  Network kinufaktur-operations_default Removing
+test	Run docker compose down	2026-11-01T20:37:26.8934206Z  Network kinufaktur-operations_default Removed
+test	Post Run actions/setup-node@v4	﻿2026-11-01T20:37:26.9391630Z Post job cleanup.
+test	Post Run actions/setup-node@v4	2026-11-01T20:37:27.0492160Z (node:5030) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Post Run actions/setup-node@v4	2026-11-01T20:37:27.0492850Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Post Run astral-sh/setup-uv@v6	﻿2026-11-01T20:37:27.0965954Z Post job cleanup.
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.2100271Z Pruning cache...
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.2119580Z (node:5038) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.2120607Z (Use `node --trace-deprecation ...` to show where the warning was created)
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.2150221Z [command]/opt/hostedtoolcache/uv/0.12.8/x86_64/uv cache prune --ci
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.2247926Z Pruning cache at: /home/runner/work/_temp/setup-uv-cache
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.3047053Z Removed 3678 files (748.0KiB)
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.3070447Z Saving cache path: /home/runner/work/_temp/setup-uv-cache
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.3189253Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center --files-from manifest.txt --use-compress-program zstdmt
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.5290512Z (node:5038) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.7452121Z Sent 2137 of 2137 (100.0%), 0.0 MBs/sec
+test	Post Run astral-sh/setup-uv@v6	2026-11-01T20:37:27.8695434Z cache saved with the key: setup-uv-1-x86_64-unknown-linux-gnu-3.11-pruned-c6992fe0b404ea1ef4ee0c55341e38855d3266707cd8a7c67d6506ab94df3838
+test	Post Run actions/checkout@v4	﻿2026-11-01T20:37:27.9081792Z Post job cleanup.
+test	Post Run actions/checkout@v4	2026-11-01T20:37:27.9796380Z [command]/usr/bin/git version
+test	Post Run actions/checkout@v4	2026-11-01T20:37:27.9837625Z git version 2.56.0
+test	Post Run actions/checkout@v4	2026-11-01T20:37:27.9872800Z Temporarily overriding HOME='/home/runner/work/_temp/792a51d9-2fef-44d0-b0a1-7090e9e7e785' before making global git config changes
+test	Post Run actions/checkout@v4	2026-11-01T20:37:27.9873997Z Adding repository directory to the temporary git global config as a safe directory
+test	Post Run actions/checkout@v4	2026-11-01T20:37:27.9885108Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/kinufaktur-ai-operations-command-center/kinufaktur-ai-operations-command-center
+test	Post Run actions/checkout@v4	2026-11-01T20:37:27.9919188Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+test	Post Run actions/checkout@v4	2026-11-01T20:37:27.9971178Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+test	Post Run actions/checkout@v4	2026-11-01T20:37:28.0251592Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test	Post Run actions/checkout@v4	2026-11-01T20:37:28.0286497Z http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-11-01T20:37:28.0296229Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+test	Post Run actions/checkout@v4	2026-11-01T20:37:28.0341268Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+test	Post Run actions/checkout@v4	2026-11-01T20:37:28.0609705Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+test	Post Run actions/checkout@v4	2026-11-01T20:37:28.0641572Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+test	Complete job	﻿2026-11-01T20:37:28.1061735Z Cleaning up orphan processes
+test	Complete job	2026-11-01T20:37:28.1369054Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4, astral-sh/setup-uv@v6. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+development	Set up job	﻿2026-11-01T20:37:34.1534645Z Current runner version: '2.338.2'
+development	Set up job	2026-11-01T20:37:34.1560873Z ##[group]Runner Image Provisioner
+development	Set up job	2026-11-01T20:37:34.1562248Z Hosted Compute Agent
+development	Set up job	2026-11-01T20:37:34.1562887Z Version: 20261021.618
+development	Set up job	2026-11-01T20:37:34.1563612Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+development	Set up job	2026-11-01T20:37:34.1564431Z Build Date: 2026-10-21T00:45:21Z
+development	Set up job	2026-11-01T20:37:34.1565126Z Worker ID: {170dd2f7-5719-4fb7-8c2b-4e31deeac0a4}
+development	Set up job	2026-11-01T20:37:34.1565925Z Region: westus
+development	Set up job	2026-11-01T20:37:34.1566516Z Cloud: Azure
+development	Set up job	2026-11-01T20:37:34.1567103Z ##[endgroup]
+development	Set up job	2026-11-01T20:37:34.1568954Z ##[group]Operating System
+development	Set up job	2026-11-01T20:37:34.1569616Z Ubuntu
+development	Set up job	2026-11-01T20:37:34.1570246Z 26.04.1
+development	Set up job	2026-11-01T20:37:34.1570778Z LTS
+development	Set up job	2026-11-01T20:37:34.1571647Z ##[endgroup]
+development	Set up job	2026-11-01T20:37:34.1572425Z ##[group]Runner Image
+development	Set up job	2026-11-01T20:37:34.1573043Z Image: ubuntu-26.04
+development	Set up job	2026-11-01T20:37:34.1573699Z Version: 20261025.179.1
+development	Set up job	2026-11-01T20:37:34.1574828Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261025.179/images/ubuntu/Ubuntu2604-Readme.md
+development	Set up job	2026-11-01T20:37:34.1576636Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261025.179
+development	Set up job	2026-11-01T20:37:34.1577747Z ##[endgroup]
+development	Set up job	2026-11-01T20:37:34.1578944Z ##[group]GITHUB_TOKEN Permissions
+development	Set up job	2026-11-01T20:37:34.1581044Z Contents: read
+development	Set up job	2026-11-01T20:37:34.1582500Z Metadata: read
+development	Set up job	2026-11-01T20:37:34.1583105Z ##[endgroup]
+development	Set up job	2026-11-01T20:37:34.1585262Z Secret source: Actions
+development	Set up job	2026-11-01T20:37:34.1586248Z Cache mode: write
+development	Set up job	2026-11-01T20:37:34.1587060Z Prepare workflow directory
+development	Set up job	2026-11-01T20:37:34.2648264Z Prepare all required actions
+development	Set up job	2026-11-01T20:37:34.2995840Z Complete job name: development
+development	Require independent deployment configuration	﻿2026-11-01T20:37:34.4556225Z ##[group]Run test -n "$DEPLOY_HOOK" && test -n "$FRONTEND_URL" && test -n "$API_URL"
+development	Require independent deployment configuration	2026-11-01T20:37:34.4557372Z ^[[36;1mtest -n "$DEPLOY_HOOK" && test -n "$FRONTEND_URL" && test -n "$API_URL"^[[0m
+development	Require independent deployment configuration	2026-11-01T20:37:34.4558311Z ^[[36;1mcurl --fail --silent --show-error -X POST "$DEPLOY_HOOK"^[[0m
+development	Require independent deployment configuration	2026-11-01T20:37:34.4559060Z ^[[36;1mfor attempt in $(seq 1 30); do^[[0m
+development	Require independent deployment configuration	2026-11-01T20:37:34.4560002Z ^[[36;1m  if curl --fail --silent "$API_URL/health" && curl --fail --silent "$FRONTEND_URL"; then exit 0; fi^[[0m
+development	Require independent deployment configuration	2026-11-01T20:37:34.4560900Z ^[[36;1m  sleep 10^[[0m
+development	Require independent deployment configuration	2026-11-01T20:37:34.4561578Z ^[[36;1mdone^[[0m
+development	Require independent deployment configuration	2026-11-01T20:37:34.4562046Z ^[[36;1mexit 1^[[0m
+development	Require independent deployment configuration	2026-11-01T20:37:34.5422571Z shell: /usr/bin/bash -e {0}
+development	Require independent deployment configuration	2026-11-01T20:37:34.5423572Z env:
+development	Require independent deployment configuration	2026-11-01T20:37:34.5424083Z   DEPLOY_HOOK:
+development	Require independent deployment configuration	2026-11-01T20:37:34.5424612Z   FRONTEND_URL:
+development	Require independent deployment configuration	2026-11-01T20:37:34.5425111Z   API_URL:
+development	Require independent deployment configuration	2026-11-01T20:37:34.5425585Z ##[endgroup]
+development	Require independent deployment configuration	2026-11-01T20:37:34.5868231Z curl: option : blank argument where content is expected
+development	Require independent deployment configuration	2026-11-01T20:37:34.5869792Z curl: try 'curl --help' or 'curl --manual' for more information
+development	Require independent deployment configuration	2026-11-01T20:37:34.5896801Z ##[error]Process completed with exit code 2.
+development	Complete job	﻿2026-11-01T20:37:34.6133773Z Cleaning up orphan processes
