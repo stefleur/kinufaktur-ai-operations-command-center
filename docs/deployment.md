@@ -11,3 +11,7 @@ CI runs tests on PRs and main, builds/starts the real stack and verifies inciden
 Rollback: select a previously verified commit, redeploy images built from that commit via the independent host, preserve data volumes, and run make smoke plus a protected staging incident check. Back up both volumes first. No destructive database rollback tool is available to the agent.
 
 Current blocker: no independently provisioned public Docker host or deployment hook/URLs are supplied. No paid service has been provisioned. No full-stack public URL is claimed. The environment and workflows are real; external deployment success requires runtime HTTP evidence.
+
+Verified repository controls: main requires the `test` status check (strict); administrator bypass remains enabled. Production requires reviewer `stefleur` and prevents self-review; administrator bypass remains enabled there too. A sole reviewer needs another workflow initiator or explicit administrator action. Saved API responses are evidence/branch-protection.json and evidence/production-environment.json. CI test job passed; development job actually failed on missing configuration in run41347664484.
+
+If upgrading the first local root-run development image to the non-root image with existing telemetry, fix ownership once: `docker compose exec -u root backend chown -R appuser:appuser /data`, then restart backend. Fresh volumes initialize with the correct ownership (verified in CI).

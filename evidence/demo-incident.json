@@ -1,16 +1,16 @@
 {
-  "recorded_at": "2026-11-01T20:34:20.565855+00:00",
+  "recorded_at": "2026-11-01T20:36:58.806931+00:00",
   "base_url": "http://localhost:8000",
   "baseline": {
     "status": 200,
     "headers": {
-      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "date": "Sun, 01 Nov 2026 20:36:58 GMT",
       "server": "uvicorn",
       "content-length": "22",
       "content-type": "application/json",
-      "x-request-id": "25c0debb-af93-464b-a9f5-389d1549bf17",
-      "x-trace-id": "c2de6532de5ec446f03509ddfc6009e5",
-      "traceparent": "00-c2de6532de5ec446f03509ddfc6009e5-99a4d1ae2c0593e9-01",
+      "x-request-id": "6dbb3e96-6460-4d7a-9f19-befd0839ae5f",
+      "x-trace-id": "cfe73f04486931da41b2a7d1217dcba0",
+      "traceparent": "00-cfe73f04486931da41b2a7d1217dcba0-65c0e6f7df303bf7-01",
       "connection": "close"
     },
     "body": {
@@ -20,13 +20,13 @@
   "fault": {
     "status": 200,
     "headers": {
-      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "date": "Sun, 01 Nov 2026 20:36:58 GMT",
       "server": "uvicorn",
       "content-length": "20",
       "content-type": "application/json",
-      "x-request-id": "69a5011f-fce9-43d3-9bd2-360637dfdf40",
-      "x-trace-id": "6e8e514aa5525fe29ed4e269798a12b7",
-      "traceparent": "00-6e8e514aa5525fe29ed4e269798a12b7-3fe81dac8633fba0-01",
+      "x-request-id": "dff3ec77-622a-457e-88ce-ab5690c5f116",
+      "x-trace-id": "ee5e4af60d731d0ec137b7ee9ab7491c",
+      "traceparent": "00-ee5e4af60d731d0ec137b7ee9ab7491c-c3a65fa5d2f12545-01",
       "connection": "close"
     },
     "body": {
@@ -36,46 +36,46 @@
   "failed_request": {
     "status": 503,
     "headers": {
-      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "date": "Sun, 01 Nov 2026 20:36:58 GMT",
       "server": "uvicorn",
       "content-length": "149",
       "content-type": "application/json",
-      "x-request-id": "demo-dc91bef9bf3a9d3c1fb9837e",
-      "x-trace-id": "024e53116b7509fe8a534f267c911e14",
-      "traceparent": "00-024e53116b7509fe8a534f267c911e14-0c6f0111dc7a11a2-01",
+      "x-request-id": "demo-8c8046ec0c51bfc5a25eca23",
+      "x-trace-id": "6bf7122d14ef1b9bc51197cc0637a73e",
+      "traceparent": "00-6bf7122d14ef1b9bc51197cc0637a73e-50eba47116eaa5d8-01",
       "connection": "close"
     },
     "body": {
       "detail": "Demo workflow dependency unavailable.",
-      "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
-      "trace_id": "024e53116b7509fe8a534f267c911e14"
+      "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
+      "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e"
     }
   },
   "incident": {
-    "timestamp": 1793565260.6357012,
-    "id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
-    "trace_id": "024e53116b7509fe8a534f267c911e14",
-    "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+    "timestamp": 1793565418.8886964,
+    "id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
+    "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+    "request_id": "demo-8c8046ec0c51bfc5a25eca23",
     "status": "resolved",
     "diagnosis": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact.",
     "action": "reset_demo_dependency",
     "result": "Verified dependency recovery through HTTP health check.",
     "timeline": [
       {
-        "timestamp": 1793565260.6082213,
+        "timestamp": 1793565418.850431,
         "event": "user_impact_detected"
       },
       {
-        "timestamp": 1793565260.6107116,
+        "timestamp": 1793565418.852711,
         "event": "agent_activated"
       },
       {
-        "timestamp": 1793565260.6121187,
+        "timestamp": 1793565418.8543217,
         "event": "tool_started",
         "tool": "inspect_telemetry_and_health"
       },
       {
-        "timestamp": 1793565260.616374,
+        "timestamp": 1793565418.8713233,
         "event": "observation",
         "tool": "inspect_telemetry_and_health",
         "result": {
@@ -83,23 +83,23 @@
             "status_code": 503,
             "status": "faulted"
           },
-          "failed_workflow_count": 1,
+          "failed_workflow_count": 2,
           "correlated_log_count": 4,
           "correlated_span_count": 1
         }
       },
       {
-        "timestamp": 1793565260.6187425,
+        "timestamp": 1793565418.8745692,
         "event": "diagnosis",
         "result": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact."
       },
       {
-        "timestamp": 1793565260.622371,
+        "timestamp": 1793565418.8760965,
         "event": "tool_started",
         "tool": "reset_demo_dependency"
       },
       {
-        "timestamp": 1793565260.6266747,
+        "timestamp": 1793565418.8800511,
         "event": "tool_invocation",
         "tool": "reset_demo_dependency",
         "result": {
@@ -108,12 +108,12 @@
         }
       },
       {
-        "timestamp": 1793565260.6282792,
+        "timestamp": 1793565418.8815508,
         "event": "tool_started",
         "tool": "dependency_health"
       },
       {
-        "timestamp": 1793565260.6317291,
+        "timestamp": 1793565418.8847713,
         "event": "recovery_verification",
         "tool": "dependency_health",
         "result": {
@@ -122,7 +122,7 @@
         }
       },
       {
-        "timestamp": 1793565260.6332471,
+        "timestamp": 1793565418.8862252,
         "event": "incident_resolved",
         "result": "Verified dependency recovery through HTTP health check."
       }
@@ -137,14 +137,91 @@
       }
     },
     "metrics": {
-      "request_count": 27,
-      "error_count": 1,
-      "error_rate": 0.037037037037037035,
-      "average_latency_ms": 13.627341000003483,
-      "workflow_count": 2,
-      "failed_workflow_count": 1
+      "request_count": 91,
+      "error_count": 2,
+      "error_rate": 0.02197802197802198,
+      "average_latency_ms": 15.20126372527558,
+      "workflow_count": 5,
+      "failed_workflow_count": 2
     },
     "incidents": [
+      {
+        "timestamp": 1793565418.8886964,
+        "id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "status": "resolved",
+        "diagnosis": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact.",
+        "action": "reset_demo_dependency",
+        "result": "Verified dependency recovery through HTTP health check.",
+        "timeline": [
+          {
+            "timestamp": 1793565418.850431,
+            "event": "user_impact_detected"
+          },
+          {
+            "timestamp": 1793565418.852711,
+            "event": "agent_activated"
+          },
+          {
+            "timestamp": 1793565418.8543217,
+            "event": "tool_started",
+            "tool": "inspect_telemetry_and_health"
+          },
+          {
+            "timestamp": 1793565418.8713233,
+            "event": "observation",
+            "tool": "inspect_telemetry_and_health",
+            "result": {
+              "health": {
+                "status_code": 503,
+                "status": "faulted"
+              },
+              "failed_workflow_count": 2,
+              "correlated_log_count": 4,
+              "correlated_span_count": 1
+            }
+          },
+          {
+            "timestamp": 1793565418.8745692,
+            "event": "diagnosis",
+            "result": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact."
+          },
+          {
+            "timestamp": 1793565418.8760965,
+            "event": "tool_started",
+            "tool": "reset_demo_dependency"
+          },
+          {
+            "timestamp": 1793565418.8800511,
+            "event": "tool_invocation",
+            "tool": "reset_demo_dependency",
+            "result": {
+              "status_code": 200,
+              "status": "healthy"
+            }
+          },
+          {
+            "timestamp": 1793565418.8815508,
+            "event": "tool_started",
+            "tool": "dependency_health"
+          },
+          {
+            "timestamp": 1793565418.8847713,
+            "event": "recovery_verification",
+            "tool": "dependency_health",
+            "result": {
+              "status_code": 200,
+              "status": "healthy"
+            }
+          },
+          {
+            "timestamp": 1793565418.8862252,
+            "event": "incident_resolved",
+            "result": "Verified dependency recovery through HTTP health check."
+          }
+        ]
+      },
       {
         "timestamp": 1793565260.6357012,
         "id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
@@ -225,6 +302,15 @@
     ],
     "alerts": [
       {
+        "timestamp": 1793565418.8895516,
+        "id": "73c1876a-f310-45ee-abcd-f41605a44140",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "rule": "workflow_failure",
+        "threshold": 1,
+        "state": "resolved"
+      },
+      {
         "timestamp": 1793565260.6365538,
         "id": "8868f52d-69b4-4396-9662-576b12b7f195",
         "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
@@ -238,206 +324,206 @@
   "correlated_telemetry": {
     "traces": [
       {
-        "timestamp": 1793565260.6391778,
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "span_id": "0c6f0111dc7a11a2",
-        "parent_span_id": "58d8d66ff3636ba7",
+        "timestamp": 1793565418.8920708,
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "span_id": "50eba47116eaa5d8",
+        "parent_span_id": "44a5268f4b00ccf8",
         "name": "POST /workflows/run",
-        "duration_ms": 35.970833,
+        "duration_ms": 46.792333,
         "status": "ERROR",
         "attributes": {
           "http.request.method": "POST",
           "http.route": "/workflows/run",
           "http.response.status_code": 503,
-          "request.id": "demo-dc91bef9bf3a9d3c1fb9837e"
+          "request.id": "demo-8c8046ec0c51bfc5a25eca23"
         },
-        "id": "4c4b200e-fdb5-4ec4-a341-d7aace880197"
+        "id": "4b1fb471-080e-4b9d-ac51-3897e7081aaa"
       },
       {
-        "timestamp": 1793565260.6350121,
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "span_id": "adb31bcd5d1b853c",
-        "parent_span_id": "0c6f0111dc7a11a2",
+        "timestamp": 1793565418.8877552,
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "span_id": "712bf9245341206b",
+        "parent_span_id": "50eba47116eaa5d8",
         "name": "on_call_agent",
-        "duration_ms": 24.3275,
+        "duration_ms": 35.048292,
         "status": "UNSET",
         "attributes": {},
-        "id": "3feb80a3-15f4-4ffb-bcfd-245836e1413c"
+        "id": "63481a45-55f3-4a02-a611-59bde445d296"
       },
       {
-        "timestamp": 1793565260.6309755,
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "span_id": "9b5c88841f7c6042",
-        "parent_span_id": "adb31bcd5d1b853c",
+        "timestamp": 1793565418.884091,
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "span_id": "f155ae7df77ce55d",
+        "parent_span_id": "712bf9245341206b",
         "name": "agent.verify_health",
-        "duration_ms": 1.042,
+        "duration_ms": 0.941542,
         "status": "UNSET",
         "attributes": {},
-        "id": "69619baa-55a1-4460-87ce-40ccce35cdde"
+        "id": "acbb078d-6b4f-4461-8fb9-d0eb79305b4d"
       },
       {
-        "timestamp": 1793565260.625807,
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "span_id": "0ed524c644ab08b3",
-        "parent_span_id": "adb31bcd5d1b853c",
+        "timestamp": 1793565418.8793879,
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "span_id": "2f73a4b9b0041cc7",
+        "parent_span_id": "712bf9245341206b",
         "name": "agent.reset_demo_dependency",
-        "duration_ms": 1.546709,
+        "duration_ms": 1.409625,
         "status": "UNSET",
         "attributes": {},
-        "id": "d1957309-308a-4ef1-a31d-7ccbd072964a"
+        "id": "676012c6-af44-4eff-87be-516363f6a992"
       },
       {
-        "timestamp": 1793565260.6055398,
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "span_id": "96998722f8b61dce",
-        "parent_span_id": "0c6f0111dc7a11a2",
+        "timestamp": 1793565418.847259,
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "span_id": "1ce5f78ab3f94e98",
+        "parent_span_id": "50eba47116eaa5d8",
         "name": "workflow.dependency",
-        "duration_ms": 1.95575,
+        "duration_ms": 1.572333,
         "status": "ERROR",
         "attributes": {
           "http.response.status_code": 503
         },
-        "id": "289184ac-ff30-4bb0-9068-66905099a1bf"
+        "id": "565ad6d6-6356-46b2-ba6b-8856bbb924ba"
       }
     ],
     "logs": [
       {
-        "timestamp": 1793565260.6375332,
+        "timestamp": 1793565418.89044,
         "event": "http_request",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
         "method": "POST",
         "route": "/workflows/run",
         "status_code": 503,
-        "duration_ms": 34.562958000037725,
-        "id": "a61daad7-8bcf-4bf6-a8a6-554a4e4692fe"
+        "duration_ms": 45.30533299998751,
+        "id": "b8353e40-15eb-4ff7-996a-e5636798b23a"
       },
       {
-        "timestamp": 1793565260.633257,
+        "timestamp": 1793565418.886233,
         "event": "incident_resolved",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "result": "Verified dependency recovery through HTTP health check.",
-        "id": "b1255fa0-b46f-4461-9a1e-7c9d9acdc8cc"
+        "id": "f5f0ebfd-1af7-47a9-9de3-6ddd3912abd5"
       },
       {
-        "timestamp": 1793565260.6317396,
+        "timestamp": 1793565418.8847806,
         "event": "recovery_verification",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "tool": "dependency_health",
         "result": {
           "status_code": 200,
           "status": "healthy"
         },
-        "id": "916e52d9-0647-44e6-b3f8-3bba9669ff67"
+        "id": "1c329dc4-d30b-4228-bdd4-88b4c8006321"
       },
       {
-        "timestamp": 1793565260.6282895,
+        "timestamp": 1793565418.88156,
         "event": "tool_started",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "tool": "dependency_health",
-        "id": "dbe3f3fc-92ef-4248-a4e0-9640c3e2b572"
+        "id": "a485f24d-0901-4d3f-876c-fdbcdb9eda7a"
       },
       {
-        "timestamp": 1793565260.6266856,
+        "timestamp": 1793565418.8800604,
         "event": "tool_invocation",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "tool": "reset_demo_dependency",
         "result": {
           "status_code": 200,
           "status": "healthy"
         },
-        "id": "290745c1-de3b-41ef-97b8-ce397df8e553"
+        "id": "e6606400-0db4-4437-99d3-757436cc695a"
       },
       {
-        "timestamp": 1793565260.6223829,
+        "timestamp": 1793565418.8761063,
         "event": "tool_started",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "tool": "reset_demo_dependency",
-        "id": "748d9220-d7bb-4e37-91ce-8810e6a720e4"
+        "id": "14f8598a-2b9d-4c70-8db6-f4746435ad18"
       },
       {
-        "timestamp": 1793565260.6187522,
+        "timestamp": 1793565418.8745883,
         "event": "diagnosis",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "result": "Isolated demo dependency is deliberately faulted; correlated workflow failure confirms user impact.",
-        "id": "00107fb9-386e-4d4e-bdbc-87b09c1c80b3"
+        "id": "fe1ba6b5-6fd2-4b01-b986-e9ea8892bc1b"
       },
       {
-        "timestamp": 1793565260.6163948,
+        "timestamp": 1793565418.8713698,
         "event": "observation",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "tool": "inspect_telemetry_and_health",
         "result": {
           "health": {
             "status_code": 503,
             "status": "faulted"
           },
-          "failed_workflow_count": 1,
+          "failed_workflow_count": 2,
           "correlated_log_count": 4,
           "correlated_span_count": 1
         },
-        "id": "edfe5325-41a1-48bc-83e7-17882087bd4e"
+        "id": "c30580be-170a-4209-ad7e-c20cee8b71b8"
       },
       {
-        "timestamp": 1793565260.612128,
+        "timestamp": 1793565418.8543324,
         "event": "tool_started",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "tool": "inspect_telemetry_and_health",
-        "id": "f9c90010-b72d-4a70-a4c8-fe707e5c4328"
+        "id": "fc518275-63c0-44d3-8dea-b18d4eba3f77"
       },
       {
-        "timestamp": 1793565260.6107187,
+        "timestamp": 1793565418.852719,
         "event": "agent_activated",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
-        "id": "3fa7024e-4cf5-40ae-8fa7-c984aff7e919"
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
+        "id": "c0d58ca9-b479-46d9-be8f-7bd21a027fc4"
       },
       {
-        "timestamp": 1793565260.6098516,
+        "timestamp": 1793565418.8519495,
         "event": "alert_fired",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
-        "incident_id": "5efd4c49-c870-4f44-b0c7-d3d13aa28935",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
+        "incident_id": "9d99d0cc-6422-4b3e-b512-c45ebe3820d4",
         "rule": "workflow_failure",
-        "id": "9260f783-2820-4551-9aad-d3a65aedaeea"
+        "id": "89b5b58f-3ca9-4d35-b530-ae753cf4051e"
       },
       {
-        "timestamp": 1793565260.607435,
+        "timestamp": 1793565418.8494866,
         "event": "workflow_failed",
-        "trace_id": "024e53116b7509fe8a534f267c911e14",
-        "request_id": "demo-dc91bef9bf3a9d3c1fb9837e",
+        "trace_id": "6bf7122d14ef1b9bc51197cc0637a73e",
+        "request_id": "demo-8c8046ec0c51bfc5a25eca23",
         "status_code": 503,
-        "id": "73b76dec-fb39-4cad-ad32-3daeb3f5f6b4"
+        "id": "2b0ea198-103d-463a-b428-ad1ca422f3f7"
       }
     ]
   },
   "health": {
     "status": 200,
     "headers": {
-      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "date": "Sun, 01 Nov 2026 20:36:58 GMT",
       "server": "uvicorn",
       "content-length": "20",
       "content-type": "application/json",
-      "x-request-id": "67dd795b-ba30-4ff1-bbe8-f50c2e1f1aaa",
-      "x-trace-id": "fa7c48d158d5695ebc0a169d7d88c90a",
-      "traceparent": "00-fa7c48d158d5695ebc0a169d7d88c90a-5b26392b1fa910ed-01",
+      "x-request-id": "bef2ac08-25a9-42fc-b15b-ad3f317c88b5",
+      "x-trace-id": "ca584449038c6a8eb71310fda4be5fc4",
+      "traceparent": "00-ca584449038c6a8eb71310fda4be5fc4-34a67f5a7b4f8fd0-01",
       "connection": "close"
     },
     "body": {
@@ -447,13 +533,13 @@
   "recovered_request": {
     "status": 200,
     "headers": {
-      "date": "Sun, 01 Nov 2026 20:34:20 GMT",
+      "date": "Sun, 01 Nov 2026 20:36:58 GMT",
       "server": "uvicorn",
       "content-length": "22",
       "content-type": "application/json",
-      "x-request-id": "6ccfd7ed-7238-4620-a2d7-6e6fee215125",
-      "x-trace-id": "2886c57abbec504e7e24bbd8877c6098",
-      "traceparent": "00-2886c57abbec504e7e24bbd8877c6098-d390590c6607776d-01",
+      "x-request-id": "08528058-8d32-42da-b5cf-30e67bdca552",
+      "x-trace-id": "57c139fc9fa7dc2d5848af0f1be9b3f3",
+      "traceparent": "00-57c139fc9fa7dc2d5848af0f1be9b3f3-72c2c7334f8b2f96-01",
       "connection": "close"
     },
     "body": {
